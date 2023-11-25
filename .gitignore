@@ -48,3 +48,5 @@ yarn.lock
 !package-lock.json
 
 *.iml
+
+.idea
