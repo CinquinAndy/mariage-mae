@@ -1,16 +1,27 @@
 import Image from 'next/image'
+import { NavComponent } from '@/components/Nav.component'
 
 export default function Home() {
 	return (
 		<>
+			<NavComponent></NavComponent>
 			<main
 				className={
 					'relative flex h-screen w-screen flex-col items-center justify-center'
 				}
 			>
+				<h2
+					className={
+						'absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 ' +
+						'special-title -z-10 h-screen w-screen -rotate-12 transform items-center justify-center overflow-hidden text-center text-black/10'
+					}
+				>
+					Will you <br />
+					Marry me ?
+				</h2>
 				<div
 					className={
-						'relative h-[75vh] w-[80vw] rounded border border-gray-100 shadow-2xl'
+						'relative mt-16 h-[75vh] w-[70vw] rounded border border-gray-100 shadow-2xl'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
@@ -36,7 +47,9 @@ export default function Home() {
 					/>
 				</div>
 			</main>
-			<div className={'mx-auto max-w-7xl py-16'}>second bloc</div>
+			<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>
+				second bloc
+			</div>
 		</>
 	)
 }

@@ -85,3 +85,24 @@ button {
         @apply flex h-[20px] w-[20px] items-center justify-center text-white transition-all;
     }
 }
+
+.special-title{
+    font-size: 7.5rem;
+    line-height: 40rem;
+}
+
+/* for tablet */
+@media screen and (min-width: 768px) {
+    .special-title{
+        font-size: 12rem;
+        line-height: 40rem;
+    }
+}
+
+/* for desktop */
+@media screen and (min-width: 1024px) {
+    .special-title{
+        font-size: 30rem;
+        line-height: 40rem;
+    }
+}
