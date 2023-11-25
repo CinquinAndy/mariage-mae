@@ -9,14 +9,12 @@ module.exports = {
 	],
 	safelist: [
 		{
-			// fixme replace kanit, updock etc with your chosen font
 			pattern: /font-(kanit|updock)/,
 		},
 	],
 	theme: {
 		extend: {
 			fontFamily: {
-				// fixme replace kanit, updock etc with your chosen font
 				kanit: 'var(--font-kanit)',
 				updock: 'var(--font-updock)',
 			},
