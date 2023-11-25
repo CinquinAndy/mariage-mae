@@ -5,23 +5,35 @@ export default function Home() {
 	return (
 		<>
 			<NavComponent></NavComponent>
-			<main
+			<div
 				className={
-					'relative flex h-screen w-screen flex-col items-center justify-center'
+					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
 				}
 			>
-				<h2
-					className={
-						'absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 ' +
-						'special-title -z-10 h-screen w-screen -rotate-12 transform items-center justify-center overflow-hidden text-center text-black/10'
-					}
-				>
-					Will you <br />
-					Marry me ?
-				</h2>
+				<Image
+					src={'/willumarryme.jpg'}
+					fill={true}
+					className={'-z-10 hidden object-cover xl:block'}
+					alt={'will u marry me'}
+					quality={90}
+				/>
+				<Image
+					src={'/willumarryme_tablet.jpg'}
+					fill={true}
+					className={'-z-10 hidden object-cover md:block xl:hidden'}
+					alt={'will u marry me'}
+					quality={90}
+				/>
+				<Image
+					src={'/willumarryme_phone.jpg'}
+					fill={true}
+					className={'-z-10 block object-cover md:hidden'}
+					alt={'will u marry me'}
+					quality={90}
+				/>
 				<div
 					className={
-						'relative mt-16 h-[75vh] w-[70vw] rounded border border-gray-100 shadow-2xl'
+						'relative mt-16 h-[75%] w-[70%] rounded border border-gray-100 shadow-2xl'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
@@ -43,10 +55,10 @@ export default function Home() {
 						src={'/background.jpg'}
 						alt={'Wedding'}
 						fill={true}
-						className={'pointer-events-none -z-10 object-cover grayscale'}
+						className={'-z-10 object-cover grayscale'}
 					/>
 				</div>
-			</main>
+			</div>
 			<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>
 				second bloc
 			</div>

@@ -33,7 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html className={`${kanit.variable} ${updock.variable}`}>
-			<body className={'flex min-h-screen w-full flex-col text-slate-950'}>
+			<body>
 				<WrapNextUiProvider>{children}</WrapNextUiProvider>
 			</body>
 		</html>
