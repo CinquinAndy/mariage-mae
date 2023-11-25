@@ -9,16 +9,16 @@ module.exports = {
 	],
 	safelist: [
 		{
-			// fixme replace kanit, playpen_sans etc with your chosen font
-			pattern: /font-(kanit|playpen_sans)/,
+			// fixme replace kanit, updock etc with your chosen font
+			pattern: /font-(kanit|updock)/,
 		},
 	],
 	theme: {
 		extend: {
 			fontFamily: {
-				// fixme replace kanit, playpen_sans etc with your chosen font
+				// fixme replace kanit, updock etc with your chosen font
 				kanit: 'var(--font-kanit)',
-				playpen_sans: 'var(--font-playpen_sans)',
+				updock: 'var(--font-updock)',
 			},
 		},
 	},

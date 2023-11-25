@@ -61,7 +61,7 @@ button {
 
     h1, h2, h3, h4, h5, h6 {
         /*fixme change the title font here (and in the layout.js in  /app) */
-        @apply font-playpen_sans;
+        @apply font-updock;
     }
 
     h1 {
