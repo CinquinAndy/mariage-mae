@@ -4,7 +4,7 @@ import { NavComponent } from '@/components/Nav.component'
 export default function Home() {
 	return (
 		<>
-			<NavComponent></NavComponent>
+			<NavComponent />
 			<div
 				className={
 					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
@@ -33,7 +33,7 @@ export default function Home() {
 				/>
 				<div
 					className={
-						'relative mt-16 h-[75%] w-[70%] rounded border border-gray-100 shadow-2xl'
+						'relative h-[85%] w-[90%] rounded border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>

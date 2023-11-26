@@ -28,14 +28,6 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: underline;
-}
-
-button {
-    text-decoration: underline;
-}
-
 @media screen and (min-width: 768px) {
     ::-webkit-scrollbar {
         -webkit-appearance: none;
