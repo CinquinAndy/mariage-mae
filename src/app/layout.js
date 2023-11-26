@@ -19,8 +19,9 @@ const updock = Updock({
 })
 
 export const metadata = {
-	title: 'Here is the forhives template',
-	description: 'Here is the forhives template',
+	title: 'Le mariage de Maeva et Romain',
+	description:
+		'Le plus beau jour de notre vie, notre mariage, toutes les infos ici !',
 	metadataBase: new URL('https://wedding.cinquin-maeva.com'),
 	alternates: {
 		canonical: '/',
