@@ -1,18 +1,16 @@
 // stores/visitedPagesStore.js
 import create from 'zustand'
 
-const useVisitedPagesStore = create(set => ({
+const useVisitedPagesStore = create((set, get) => ({
 	visitedPages: {},
 	addVisitedPage: page =>
 		set(state => ({
-			visitedPages: { ...state.visitedPages, [page]: true },
+			visitedPages: { ...state.visitedPages, [page]: false },
 		})),
 	removeVisitedPageIndicator: page =>
-		set(state => {
-			const newVisitedPages = { ...state.visitedPages }
-			delete newVisitedPages[page]
-			return { visitedPages: newVisitedPages }
-		}),
+		set(state => ({
+			visitedPages: { ...state.visitedPages, [page]: true },
+		})),
 }))
 
 export default useVisitedPagesStore

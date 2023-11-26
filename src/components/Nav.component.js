@@ -18,6 +18,7 @@ export function NavComponent() {
 
 	const handleClick = page => {
 		addVisitedPage(page)
+		removeVisitedPageIndicator(page)
 	}
 
 	return (
@@ -43,7 +44,7 @@ export function NavComponent() {
 								) : (
 									<>
 										{label}
-										{visitedPages[href] !== null && (
+										{visitedPages[href] !== true && (
 											<span className="absolute -right-2.5 -top-0 h-1.5 w-1.5 rounded-full bg-red-700"></span>
 										)}
 									</>
