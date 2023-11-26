@@ -1,11 +1,9 @@
 import Image from 'next/image'
-import { NavComponent } from '@/components/Nav.component'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
 
 export default function Home() {
 	return (
 		<>
-			<NavComponent />
 			<div
 				className={
 					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'

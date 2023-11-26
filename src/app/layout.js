@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import WrapNextUiProvider from '@/providers/WrapNextUiProvider'
 import { Kanit, Updock } from 'next/font/google'
+import { NavComponent } from '@/components/Nav.component'
 
 const kanit = Kanit({
 	weight: ['100', '300', '400', '700', '900'],
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html className={`${kanit.variable} ${updock.variable} text-mae-950`}>
 			<body>
+				<NavComponent />
 				<WrapNextUiProvider>{children}</WrapNextUiProvider>
 			</body>
 		</html>

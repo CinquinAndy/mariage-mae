@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
 import { useState } from 'react'
 
-export function NavPhoneComponent() {
+export function NavPhoneComponent({ navLinks }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	return (
