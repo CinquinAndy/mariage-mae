@@ -87,45 +87,46 @@ function MariageMaeEtRomainComponent() {
 			</div>
 			<div
 				className={
-					'relative grid w-full grid-cols-12 gap-4 px-8 md:gap-8 md:px-16 xl:px-32'
+					'relative grid w-full grid-cols-6 gap-4 px-8 text-center md:gap-8 md:px-16 lg:grid-cols-12 xl:px-32'
 				}
 			>
 				<div
 					className={
-						'relative col-span-3 flex flex-col items-center justify-center gap-4'
+						'relative col-span-3 flex flex-col items-center justify-start gap-4'
 					}
 				>
 					<p className={'text-xl'}>Date</p>
-					<p>10 août 2024</p>
+					<p className={'text-sm'}>10 août 2024</p>
 					<p className={'text-xs'}>
-						La réception débute a 14:15 , la soirée a 18:00
+						La réception débute à 14:15 , <br />
+						la soirée à 18:00
 					</p>
 				</div>
 				<div
 					className={
-						'relative col-span-3 flex flex-col items-center justify-center gap-4'
+						'relative col-span-3 flex flex-col items-center justify-start gap-4'
 					}
 				>
 					<p className={'text-xl'}>Mairie</p>
-					<p>10h00</p>
+					<p className={'text-sm'}>10h00</p>
 					<p className={'text-xs'}>1 rue du Mollard, 74200 Anthy</p>
 				</div>
 				<div
 					className={
-						'relative col-span-3 flex flex-col items-center justify-center gap-4'
+						'relative col-span-3 flex flex-col items-center justify-start gap-4'
 					}
 				>
 					<p className={'text-xl'}>Eglise</p>
-					<p>12h00</p>
+					<p className={'text-sm'}>12h00</p>
 					<p className={'text-xs'}>1 rue du Mollard, 74200 Anthy</p>
 				</div>
 				<div
 					className={
-						'relative col-span-3 flex flex-col items-center justify-center gap-4'
+						'relative col-span-3 flex flex-col items-center justify-start gap-4'
 					}
 				>
 					<p className={'text-xl'}>Soirée</p>
-					<p>18h00</p>
+					<p className={'text-sm'}>18h00</p>
 					<p className={'text-xs'}>15 rue des pécheurs, 74200 Anthy</p>
 				</div>
 			</div>
