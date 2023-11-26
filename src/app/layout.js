@@ -32,7 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html className={`${kanit.variable} ${updock.variable}`}>
+		<html className={`${kanit.variable} ${updock.variable} text-mae-950`}>
 			<body>
 				<WrapNextUiProvider>{children}</WrapNextUiProvider>
 			</body>
