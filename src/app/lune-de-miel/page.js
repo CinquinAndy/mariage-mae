@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import { CustomSvgComponent } from '@/components/CustomSvg.component'
 
-export default function Home() {
+export default function Page() {
 	return (
 		<>
 			<div
@@ -46,45 +45,8 @@ export default function Home() {
 									'text-center text-5xl text-white shadow-black text-shadow-lg lg:text-7xl xl:text-9xl'
 								}
 							>
-								Maeva & Romain
+								Lune de miel
 							</h1>
-							<div
-								className={
-									'absolute bottom-32 left-1/2 -translate-x-1/2 transform px-4 py-2 md:bottom-8'
-								}
-							>
-								<div className={'relative h-full w-full'}>
-									<h2
-										className={
-											'text-center text-4xl text-white shadow-black text-shadow-lg'
-										}
-									>
-										10 août 2024
-									</h2>
-									<div
-										className={
-											'absolute -right-[25px] -top-[15px] flex items-center justify-center'
-										}
-									>
-										<CustomSvgComponent
-											classNames={'w-[25px] h-[25px] bg-white/75'}
-											url={'/party-horn.svg'}
-										/>
-									</div>
-									<div
-										className={
-											'absolute -left-[25px] -top-[15px] flex items-center justify-center'
-										}
-									>
-										<CustomSvgComponent
-											classNames={
-												'w-[25px] h-[25px] bg-white/75 transform scale-x-[-1]'
-											}
-											url={'/party-horn.svg'}
-										/>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<Image
