@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
+import MariageMaeEtRomainComponent from '@/components/Landing/MariageMaeEtRomain.component'
 
 export default function Home() {
 	return (
@@ -95,9 +96,7 @@ export default function Home() {
 					/>
 				</div>
 			</div>
-			<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>
-				second bloc
-			</div>
+			<MariageMaeEtRomainComponent />
 		</>
 	)
 }
