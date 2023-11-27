@@ -1,6 +1,7 @@
 import TitleOrnementedComponent from '@/components/Landing/TitleOrnemented.component'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
 import Image from 'next/image'
+import { EventInfoComponent } from '@/components/Landing/EventInfo.component'
 
 function MariageMaeEtRomainComponent() {
 	return (
@@ -87,48 +88,37 @@ function MariageMaeEtRomainComponent() {
 			</div>
 			<div
 				className={
-					'relative grid w-full grid-cols-6 gap-4 px-8 text-center md:gap-8 md:px-16 lg:grid-cols-12 xl:px-32'
+					'relative grid w-full grid-cols-4 gap-4 px-8 text-center md:gap-8 md:px-16 lg:grid-cols-8 xl:px-32'
 				}
 			>
-				<div
-					className={
-						'relative col-span-3 flex flex-col items-center justify-start gap-4'
-					}
-				>
-					<p className={'text-xl'}>Date</p>
-					<p className={'text-sm'}>10 août 2024</p>
-					<p className={'text-xs'}>
-						La réception débute à 14:15 , <br />
-						la soirée à 18:00
-					</p>
-				</div>
-				<div
-					className={
-						'relative col-span-3 flex flex-col items-center justify-start gap-4'
-					}
-				>
-					<p className={'text-xl'}>Mairie</p>
-					<p className={'text-sm'}>10h00</p>
-					<p className={'text-xs'}>1 rue du Mollard, 74200 Anthy</p>
-				</div>
-				<div
-					className={
-						'relative col-span-3 flex flex-col items-center justify-start gap-4'
-					}
-				>
-					<p className={'text-xl'}>Eglise</p>
-					<p className={'text-sm'}>12h00</p>
-					<p className={'text-xs'}>1 rue du Mollard, 74200 Anthy</p>
-				</div>
-				<div
-					className={
-						'relative col-span-3 flex flex-col items-center justify-start gap-4'
-					}
-				>
-					<p className={'text-xl'}>Soirée</p>
-					<p className={'text-sm'}>18h00</p>
-					<p className={'text-xs'}>15 rue des pécheurs, 74200 Anthy</p>
-				</div>
+				<EventInfoComponent
+					title="Date"
+					time="10 août 2024"
+					address="La réception débute à 14:15, la soirée à 18:00"
+					imageSrc="/cinquinandy_calendar_icon_elegant_vector_in_the_style_of_playfu_c86f32b2-9eea-4fd5-94c3-7eb968f11940.png"
+					imageAlt="Calendar"
+				/>
+				<EventInfoComponent
+					title="Mairie"
+					time="10h00"
+					address="1 rue du Mollard, 74200 Anthy"
+					imageSrc="/cinquinandy_town_hall_icon_elegant_vector_in_the_style_of_playf_e801c3c3-ad1b-4af6-81eb-9787e17e7e51.png"
+					imageAlt="town hall"
+				/>
+				<EventInfoComponent
+					title="Eglise"
+					time="12h00"
+					address="1 rue du Mollard, 74200 Anthy"
+					imageSrc="/cinquinandy_church_icon_elegant_vector_in_the_style_of_playful__b47209db-59c0-4ace-bb03-dec9d08a37cf.png"
+					imageAlt="church"
+				/>
+				<EventInfoComponent
+					title="Soirée"
+					time="18h00"
+					address="15 rue des pécheurs, 74200 Anthy"
+					imageSrc="/cinquinandy_party_icon_elegant_vector_in_the_style_of_playful_u_350983ac-d3f0-4f15-b86f-e62304cd7dcb.png"
+					imageAlt="party"
+				/>
 			</div>
 		</div>
 	)
