@@ -199,6 +199,104 @@ function MariageMaeEtRomainComponent() {
 					</div>
 				</div>
 			</div>
+			<TitleOrnementedComponent title={'Nos témoins'} ornement={false} />
+			<div
+				className={
+					'relative grid w-full grid-cols-12 gap-8 px-8 text-start md:gap-8 md:px-16 xl:px-32'
+				}
+			>
+				<div className={'col-span-12 flex flex-col'}>
+					<h2 className={'text-3xl'}>
+						{`
+							Nos amis, les trésors de notre cœur !
+						`}
+					</h2>
+					<p className={'text-sm'}>
+						{`
+							Nos témoins, les piliers de notre grand jour. Gardiens de notre amour,
+							ils ont vu notre histoire fleurir et grandir. Ils sont le symbole de
+							l’amitié véritable, de l’amour sincère et du soutien inébranlable,
+							éclairant notre chemin comme des étoiles dans la nuit.
+						`}
+					</p>
+				</div>
+				<div className={'col-span-12 flex flex-col gap-4 md:col-span-6'}>
+					<div>
+						<h2 className={'text-3xl'}>Témoins de la mariée</h2>
+						<p className={'text-sm'}>
+							{`
+							Deux femmes extraordinaires, chacune un univers
+							à part entière. Avec des cœurs aussi vastes que l'océan, et des
+							esprits aussi brillants que les étoiles filantes
+						`}
+							<br />
+							{`
+							Ensemble, elles forment une constellation éblouissante, illuminant
+							notre journée spéciale de leur sagesse et de leur amour.
+						`}
+						</p>
+					</div>
+					<div className={'flex h-full w-full items-end justify-start gap-8'}>
+						<Image
+							src={'/image00055.jpeg'}
+							alt={'nanou'}
+							className={'h-[100px] w-[100px] rounded-full object-cover'}
+							width={150}
+							height={150}
+						></Image>
+						<Image
+							src={'/image00058.jpeg'}
+							alt={'alice'}
+							className={'h-[100px] w-[100px] rounded-full object-cover'}
+							width={150}
+							height={150}
+						></Image>
+					</div>
+				</div>
+				<div className={'col-span-12 flex h-full flex-col gap-4 md:col-span-6'}>
+					<div>
+						<h2 className={'text-3xl'}>Témoins du marié</h2>
+						<p className={'text-sm'}>
+							{`
+							 Éclats de deux mondes merveilleux, 
+							 apportent avec eux une symphonie de rires et de joie, 
+							 illuminant notre union de leur esprit pétillant et de leur bonne humeur contagieuse.
+						 `}
+						</p>
+					</div>
+					<div className={'flex h-full w-full items-end justify-start gap-8'}>
+						<Image
+							src={'/image00059.jpeg'}
+							alt={'françois'}
+							className={'h-[100px] w-[100px] rounded-full object-cover'}
+							width={150}
+							height={150}
+						></Image>
+						<Image
+							src={'/image00060.jpeg'}
+							alt={'andy'}
+							className={'h-[100px] w-[100px] rounded-full object-cover'}
+							width={150}
+							height={150}
+						></Image>
+					</div>
+				</div>
+			</div>
+			<TitleOrnementedComponent title={'Les directives !'} ornement={false} />
+			<div
+				className={
+					'relative grid w-full grid-cols-12 gap-8 px-8 text-center md:gap-8 md:px-16 xl:px-32'
+				}
+			>
+				{/*	todo section with dress code */}
+				{/*	titre : Dress code */}
+				{/*	Romantique chic */}
+				{/*	phrase d'accroche marrante */}
+
+				{/*	Theme couleur*/}
+				{/*	Blanc et bordeaux */}
+				{/*	phrase d'accroche rigolote */}
+			</div>
 		</div>
 	)
 }
