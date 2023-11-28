@@ -115,7 +115,7 @@ function MariageMaeEtRomainComponent() {
 						width={500}
 						height={500}
 						quality={100}
-						className={'rounded shadow-2xl'}
+						className={'h-[350px] rounded object-cover shadow-2xl md:h-auto'}
 					/>
 					<div className={'flex flex-col items-center justify-center gap-8'}>
 						<div className={'flex flex-col items-center justify-center gap-4'}>
@@ -138,7 +138,7 @@ function MariageMaeEtRomainComponent() {
 						width={500}
 						height={500}
 						quality={100}
-						className={'rounded shadow-2xl'}
+						className={'h-[350px] rounded object-cover shadow-2xl md:h-auto'}
 					/>
 					<div className={'flex flex-col items-center justify-center gap-8'}>
 						<div className={'flex flex-col items-center justify-center gap-4'}>
@@ -148,31 +148,55 @@ function MariageMaeEtRomainComponent() {
 						<h2 className={'text-5xl'}>Challande Romain</h2>
 					</div>
 				</div>
-				<div className={'col-span-12 flex w-full justify-between pt-16'}>
-					<Image
-						src={'/image00015.jpeg'}
-						alt={'mae'}
-						width={300}
-						height={500}
-						quality={100}
-						className={'rounded object-cover shadow-2xl'}
-					/>
-					<Image
-						src={'/image00021.jpeg'}
-						alt={'mae'}
-						width={300}
-						height={500}
-						quality={100}
-						className={'rounded object-contain shadow-2xl'}
-					/>
-					<Image
-						src={'/image00016.jpeg'}
-						alt={'mae'}
-						width={300}
-						height={500}
-						quality={100}
-						className={'rounded object-cover shadow-2xl'}
-					/>
+				<div className={'col-span-12 grid w-full grid-cols-12 gap-4 pt-16'}>
+					<div
+						className={
+							'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'
+						}
+					>
+						<Image
+							src={'/image00015.jpeg'}
+							alt={'mae'}
+							width={300}
+							height={500}
+							quality={100}
+							className={
+								'h-[400px] rounded object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
+							}
+						/>
+					</div>
+					<div
+						className={
+							'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'
+						}
+					>
+						<Image
+							src={'/image00021.jpeg'}
+							alt={'mae'}
+							width={300}
+							height={500}
+							quality={100}
+							className={
+								'h-[250px] rounded object-contain shadow-2xl md:h-[350px] xl:h-[500px]'
+							}
+						/>
+					</div>
+					<div
+						className={
+							'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'
+						}
+					>
+						<Image
+							src={'/image00016.jpeg'}
+							alt={'mae'}
+							width={300}
+							height={500}
+							quality={100}
+							className={
+								'h-[400px] rounded object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
+							}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
