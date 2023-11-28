@@ -1,7 +1,8 @@
 import TitleOrnementedComponent from '@/components/Landing/TitleOrnemented.component'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
-import Image from 'next/image'
 import { EventInfoComponent } from '@/components/Landing/EventInfo.component'
+import { SectionComponent } from '@/components/Landing/Section.component'
+import Image from 'next/image'
 
 function MariageMaeEtRomainComponent() {
 	return (
@@ -43,34 +44,12 @@ function MariageMaeEtRomainComponent() {
 				</div>
 			</div>
 			<TitleOrnementedComponent title={'On se dit oui !'} ornement={false} />
-			<div
-				className={
-					'relative grid w-full grid-cols-12 gap-4 px-8 md:gap-8 md:px-16 xl:px-32'
-				}
-			>
-				<div
-					className={
-						'relative col-span-12 flex min-h-[150px] items-center justify-center md:col-span-6 md:min-h-[250px]'
-					}
-				>
-					<Image
-						src={'/image00014.jpeg'}
-						alt={'on se dit oui'}
-						width={500}
-						height={350}
-						quality={80}
-						className={'rounded shadow-2xl'}
-					/>
-				</div>
-				<div
-					className={
-						'col-span-12 flex flex-col items-start justify-center gap-4 md:col-span-6'
-					}
-				>
-					<p className={'text-xl font-semibold tracking-wider'}>
-						Oui pour la vie !
-					</p>
-					<div className={'h-[2px] w-[20px] rounded bg-mae-950/80'} />
+			<SectionComponent
+				imageSrc={'/image00014.jpeg'}
+				imageAlt={'Mariage de Mae et Romain'}
+				title={'On se dit oui !'}
+				isReverse={false}
+				text={
 					<p className={''}>
 						{`Le 10 août 2024, nous nous dirons oui pour la vie,`}
 						<br />
@@ -84,8 +63,8 @@ function MariageMaeEtRomainComponent() {
 						<br />
 						{`Et nous accompagner dans notre vie de tous les jours.`}
 					</p>
-				</div>
-			</div>
+				}
+			/>
 			<div
 				className={
 					'relative grid w-full grid-cols-4 gap-4 px-8 text-center md:grid-cols-8 md:gap-8 md:px-16 xl:px-32'
@@ -119,6 +98,82 @@ function MariageMaeEtRomainComponent() {
 					imageSrc="/cinquinandy_party_icon_elegant_vector_in_the_style_of_playful_u_350983ac-d3f0-4f15-b86f-e62304cd7dcb.png"
 					imageAlt="party"
 				/>
+			</div>
+			<div
+				className={
+					'relative grid w-full grid-cols-12 gap-8 px-8 text-center md:gap-8 md:px-16 xl:px-32'
+				}
+			>
+				<div
+					className={
+						'col-span-6 flex w-full flex-col items-center justify-center gap-16'
+					}
+				>
+					<Image
+						src={'/image00056.jpeg'}
+						alt={'mae'}
+						width={500}
+						height={500}
+						quality={100}
+						className={'rounded shadow-2xl'}
+					/>
+					<div className={'flex flex-col items-center justify-center gap-8'}>
+						<div className={'flex flex-col items-center justify-center gap-4'}>
+							<p className={'text-xl font-semibold tracking-wider'}>
+								La mariée
+							</p>
+							<div className={'h-[2px] w-[20px] rounded bg-mae-950/30'} />
+						</div>
+						<h2 className={'text-5xl'}>Cinquin Maeva</h2>
+					</div>
+				</div>
+				<div
+					className={
+						'col-span-6 flex w-full flex-col items-center justify-center gap-16'
+					}
+				>
+					<Image
+						src={'/image00057.jpeg'}
+						alt={'mae'}
+						width={500}
+						height={500}
+						quality={100}
+						className={'rounded shadow-2xl'}
+					/>
+					<div className={'flex flex-col items-center justify-center gap-8'}>
+						<div className={'flex flex-col items-center justify-center gap-4'}>
+							<p className={'text-xl font-semibold tracking-wider'}>Le marié</p>
+							<div className={'h-[2px] w-[20px] rounded bg-mae-950/30'} />
+						</div>
+						<h2 className={'text-5xl'}>Challande Romain</h2>
+					</div>
+				</div>
+				<div className={'col-span-12 flex w-full justify-between pt-16'}>
+					<Image
+						src={'/image00015.jpeg'}
+						alt={'mae'}
+						width={300}
+						height={500}
+						quality={100}
+						className={'rounded object-cover shadow-2xl'}
+					/>
+					<Image
+						src={'/image00021.jpeg'}
+						alt={'mae'}
+						width={300}
+						height={500}
+						quality={100}
+						className={'rounded object-contain shadow-2xl'}
+					/>
+					<Image
+						src={'/image00016.jpeg'}
+						alt={'mae'}
+						width={300}
+						height={500}
+						quality={100}
+						className={'rounded object-cover shadow-2xl'}
+					/>
+				</div>
 			</div>
 		</div>
 	)
