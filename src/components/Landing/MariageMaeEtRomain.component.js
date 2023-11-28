@@ -88,7 +88,7 @@ function MariageMaeEtRomainComponent() {
 			</div>
 			<div
 				className={
-					'relative grid w-full grid-cols-4 gap-4 px-8 text-center md:gap-8 md:px-16 lg:grid-cols-8 xl:px-32'
+					'relative grid w-full grid-cols-4 gap-4 px-8 text-center md:grid-cols-8 md:gap-8 md:px-16 xl:px-32'
 				}
 			>
 				<EventInfoComponent
