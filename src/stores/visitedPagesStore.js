@@ -34,7 +34,7 @@
 // export default useVisitedPagesStore
 
 // stores/visitedPagesStore.js
-import create from 'zustand'
+import { create } from 'zustand'
 
 const useVisitedPagesStore = create((set, get) => ({
 	visitedPages: {},
