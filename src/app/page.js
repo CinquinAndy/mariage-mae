@@ -7,27 +7,27 @@ export default function Home() {
 		<>
 			<div
 				className={
-					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
+					'relative flex h-screen w-screen flex-col items-center justify-center'
 				}
 			>
 				<Image
 					src={'/willumarryme.jpg'}
 					fill={true}
-					className={'-z-10 hidden object-cover xl:block'}
+					className={'-z-50 hidden object-cover xl:block'}
 					alt={'will u marry me'}
 					quality={90}
 				/>
 				<Image
 					src={'/willumarryme_tablet.jpg'}
 					fill={true}
-					className={'-z-10 hidden object-cover md:block xl:hidden'}
+					className={'-z-50 hidden object-cover md:block xl:hidden'}
 					alt={'will u marry me'}
 					quality={90}
 				/>
 				<Image
 					src={'/willumarryme_phone.jpg'}
 					fill={true}
-					className={'-z-10 block object-cover md:hidden'}
+					className={'-z-50 block object-cover md:hidden'}
 					alt={'will u marry me'}
 					quality={90}
 				/>

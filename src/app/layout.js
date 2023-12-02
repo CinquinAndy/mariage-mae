@@ -35,8 +35,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html className={`${kanit.variable} ${updock.variable} text-mae-950`}>
-			<body>
+		<html className={`${kanit.variable} ${updock.variable}  text-mae-950`}>
+			<body className={'relative'}>
 				<NavComponent />
 				<WrapNextUiProvider>{children}</WrapNextUiProvider>
 				<SignatureComponent />
