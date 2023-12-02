@@ -15,9 +15,7 @@ export default function TitleOrnementedComponent({ title, ornement = true }) {
 					url={'vintage.svg'}
 				/>
 			)}
-			<h2 className={'text-center text-3xl md:text-4xl xl:text-6xl'}>
-				{title}
-			</h2>
+			<h2 className={'text-center text-5xl xl:text-6xl'}>{title}</h2>
 			{ornement && (
 				<CustomSvgComponent
 					classNames={

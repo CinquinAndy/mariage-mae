@@ -289,29 +289,58 @@ function MariageMaeEtRomainComponent() {
 				}
 			>
 				<div className={'col-span-12 grid w-full grid-cols-12 gap-8'}>
-					<div className={'col-span-6'}>
+					<div className={'col-span-6 flex items-center justify-end'}>
 						<Image
 							src={
 								'/cinquinandy_suit__wedding_dress_icon_elegant_vector_in_the_styl_875a42b3-b02a-43d5-8f58-193c2eece495.webp'
 							}
 							alt={'Dress Code'}
-							width={500}
-							height={500}
+							width={200}
+							height={200}
 							quality={90}
-							className={'h-[400px] rounded object-cover shadow-2xl md:h-auto'}
+							className={'h-[200px] rounded object-cover shadow-2xl md:h-auto'}
 						/>
 					</div>
-					<div className={'col-span-6 flex flex-col gap-4'}>
+					<div className={'col-span-6 flex flex-col gap-4 text-left'}>
 						<div className={'flex flex-col'}>
 							<h2 className={'text-3xl'}>Dress code</h2>
 							<p className={'font-semibold'}>→ Romantique chic</p>
 						</div>
-						<p></p>
+						<p className={'italic'}>
+							{`Tenue requise : Romantique chic,`}
+							<br />
+							{`où 'Cendrillon rencontre James Bond'.`}
+							<br />
+							{`Pantoufles en verres non fournies.`}
+						</p>
 					</div>
 				</div>
-				<div>
-					<h2>Theme couleur</h2>
-					<p>→ Blanc et bordeaux</p>
+				<div
+					className={'col-span-12 grid w-full grid-cols-12 gap-8 pt-8 md:pt-16'}
+				>
+					<div className={'col-span-6 flex flex-col gap-4 text-right'}>
+						<div className={'flex flex-col'}>
+							<h2 className={'text-3xl'}>Thème couleur</h2>
+							<p className={'font-semibold'}>→ Blanc & bordeaux</p>
+						</div>
+						<p className={'italic'}>
+							{`Imaginez que vous êtes le bouquet final d'un grand cru :`}
+							<br />
+							{`éclatant de bordeaux avec des notes de blanc.`}
+						</p>
+					</div>
+					<div className={'col-span-6 flex items-center justify-start'}>
+						<Image
+							src={
+								'/cinquinandy_suit__wedding_dress_icon_elegant_vector_in_the_styl_875a42b3-b02a-43d5-8f58-193c2eece495.webp'
+							}
+							alt={'Dress Code'}
+							width={200}
+							height={200}
+							quality={90}
+							className={'h-[200px] rounded object-cover shadow-2xl md:h-auto'}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
