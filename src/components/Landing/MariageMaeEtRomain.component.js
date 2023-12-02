@@ -291,9 +291,7 @@ function MariageMaeEtRomainComponent() {
 				<div className={'col-span-12 grid w-full grid-cols-12 gap-8'}>
 					<div className={'col-span-6 flex items-center justify-end'}>
 						<Image
-							src={
-								'/cinquinandy_suit__wedding_dress_icon_elegant_vector_in_the_styl_875a42b3-b02a-43d5-8f58-193c2eece495.webp'
-							}
+							src={'/suit_icon.webp'}
 							alt={'Dress Code'}
 							width={200}
 							height={200}
@@ -331,9 +329,7 @@ function MariageMaeEtRomainComponent() {
 					</div>
 					<div className={'col-span-6 flex items-center justify-start'}>
 						<Image
-							src={
-								'/cinquinandy_suit__wedding_dress_icon_elegant_vector_in_the_styl_875a42b3-b02a-43d5-8f58-193c2eece495.webp'
-							}
+							src={'/palet_icon.webp'}
 							alt={'Dress Code'}
 							width={200}
 							height={200}
