@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import WrapNextUiProvider from '@/providers/WrapNextUiProvider'
 import { Kanit, Updock } from 'next/font/google'
 import { NavComponent } from '@/components/Nav.component'
+import { SignatureComponent } from '@/components/SignatureFooter.component'
 
 const kanit = Kanit({
 	weight: ['100', '300', '400', '700', '900'],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
 			<body>
 				<NavComponent />
 				<WrapNextUiProvider>{children}</WrapNextUiProvider>
+				<SignatureComponent />
 			</body>
 		</html>
 	)

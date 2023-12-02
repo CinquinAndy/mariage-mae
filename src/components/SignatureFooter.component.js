@@ -1,39 +1,26 @@
 import Link from 'next/link'
 import React from 'react'
 
-export function Signature({ isPaddingActivated = true }) {
+export function SignatureComponent() {
 	const actualYear = new Date().getFullYear()
 	return (
 		<div
 			className={
-				'mx-auto flex w-full max-w-7xl py-20 ' +
-				(isPaddingActivated ? 'px-4 md:px-8 2xl:px-0' : '')
+				'mx-auto flex w-full  max-w-xl flex-col px-4 py-20 md:px-6 xl:max-w-3xl xl:px-8'
 			}
 		>
-			<p className={'mx-auto text-sm text-gray-600'}>
-				© {actualYear} My-Makeup - Tous droits réservés - Developed with ❤️ by{' '}
+			<div className={'flex w-full items-center justify-center'}>
+				<div className={'w-2/3 border-t border-gray-200 pb-20 xl:w-1/3'}></div>
+			</div>
+			<p className={'mx-auto text-center text-sm text-gray-600'}>
+				© {actualYear} Maeva Cinquin - Tous droits réservés - Developed with ❤️
+				by{' '}
 				<Link
 					className={'text-sm text-gray-600 underline'}
 					href={'https://andy-cinquin.fr'}
 					target={'_blank'}
 				>
 					Andy Cinquin
-				</Link>
-				&nbsp;&&nbsp;
-				<Link
-					className={'text-sm text-gray-600 underline'}
-					href={'https://brev.al'}
-					target={'_blank'}
-				>
-					Bréval Le Floch
-				</Link>
-				&nbsp; - 🐝
-				<Link
-					className={'text-sm text-gray-600 underline'}
-					href={'https://forhives.fr/'}
-					target={'_blank'}
-				>
-					ForHives co-founders
 				</Link>
 			</p>
 		</div>
