@@ -206,12 +206,12 @@ function MariageMaeEtRomainComponent() {
 				}
 			>
 				<div className={'col-span-12 flex flex-col'}>
-					<h2 className={'text-3xl'}>
+					<h2 className={'text-4xl'}>
 						{`
 							Nos amis, les trésors de notre cœur !
 						`}
 					</h2>
-					<p className={'text-sm'}>
+					<p className={''}>
 						{`
 							Nos témoins, les piliers de notre grand jour. Gardiens de notre amour,
 							ils ont vu notre histoire fleurir et grandir. Ils sont le symbole de
@@ -222,8 +222,8 @@ function MariageMaeEtRomainComponent() {
 				</div>
 				<div className={'col-span-12 flex flex-col gap-4 md:col-span-6'}>
 					<div>
-						<h2 className={'text-3xl'}>Témoins de la mariée</h2>
-						<p className={'text-sm'}>
+						<h2 className={'text-4xl'}>Témoins de la mariée</h2>
+						<p className={''}>
 							{`
 							Deux femmes extraordinaires, chacune un univers
 							à part entière. Avec des cœurs aussi vastes que l'océan, et des
@@ -255,8 +255,8 @@ function MariageMaeEtRomainComponent() {
 				</div>
 				<div className={'col-span-12 flex h-full flex-col gap-4 md:col-span-6'}>
 					<div>
-						<h2 className={'text-3xl'}>Témoins du marié</h2>
-						<p className={'text-sm'}>
+						<h2 className={'text-4xl'}>Témoins du marié</h2>
+						<p className={''}>
 							{`
 							 Éclats de deux mondes merveilleux, 
 							 apportent avec eux une symphonie de rires et de joie, 
