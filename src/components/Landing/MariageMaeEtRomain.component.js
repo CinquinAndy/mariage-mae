@@ -288,14 +288,31 @@ function MariageMaeEtRomainComponent() {
 					'relative grid w-full grid-cols-12 gap-8 px-8 text-center md:gap-8 md:px-16 xl:px-32'
 				}
 			>
-				{/*	todo section with dress code */}
-				{/*	titre : Dress code */}
-				{/*	Romantique chic */}
-				{/*	phrase d'accroche marrante */}
-
-				{/*	Theme couleur*/}
-				{/*	Blanc et bordeaux */}
-				{/*	phrase d'accroche rigolote */}
+				<div className={'col-span-12 grid w-full grid-cols-12 gap-8'}>
+					<div className={'col-span-6'}>
+						<Image
+							src={
+								'/cinquinandy_suit__wedding_dress_icon_elegant_vector_in_the_styl_875a42b3-b02a-43d5-8f58-193c2eece495.webp'
+							}
+							alt={'Dress Code'}
+							width={500}
+							height={500}
+							quality={90}
+							className={'h-[400px] rounded object-cover shadow-2xl md:h-auto'}
+						/>
+					</div>
+					<div className={'col-span-6 flex flex-col gap-4'}>
+						<div className={'flex flex-col'}>
+							<h2 className={'text-3xl'}>Dress code</h2>
+							<p className={'font-semibold'}>→ Romantique chic</p>
+						</div>
+						<p></p>
+					</div>
+				</div>
+				<div>
+					<h2>Theme couleur</h2>
+					<p>→ Blanc et bordeaux</p>
+				</div>
 			</div>
 		</div>
 	)
