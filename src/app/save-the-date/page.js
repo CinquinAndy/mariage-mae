@@ -44,13 +44,11 @@ export default function Page() {
 						</h1>
 					</div>
 					<div className="col-span-8 flex h-full items-center justify-evenly">
-						<div
-							className={'relative h-[500px] w-[300px] rounded-full bg-black'}
-						>
+						<div className={'relative h-[500px] w-[300px] rounded-full'}>
 							<Image
 								src={'/image00001.jpeg'}
 								fill={true}
-								className={'object-cover'}
+								className={'rounded-full object-cover'}
 								alt={'Save the date'}
 							/>
 						</div>
@@ -60,7 +58,7 @@ export default function Page() {
 							<Image
 								src={'/image00001.jpeg'}
 								fill={true}
-								className={'object-cover'}
+								className={'rounded-full object-cover'}
 								alt={'Save the date'}
 							/>
 						</div>
@@ -70,7 +68,7 @@ export default function Page() {
 							<Image
 								src={'/image00001.jpeg'}
 								fill={true}
-								className={'object-cover'}
+								className={'rounded-full object-cover'}
 								alt={'Save the date'}
 							/>
 						</div>
