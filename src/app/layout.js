@@ -7,7 +7,7 @@ import { NavComponent } from '@/components/Nav.component'
 import { SignatureComponent } from '@/components/SignatureFooter.component'
 
 const kanit = Kanit({
-	weight: ['100', '300', '400', '700', '900'],
+	weight: ['100', '200', '300', '400', '700', '900'],
 	subsets: ['latin'],
 	variable: '--font-kanit',
 	style: ['normal', 'italic'],

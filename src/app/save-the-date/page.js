@@ -43,6 +43,38 @@ export default function Page() {
 							Save the Dates
 						</h1>
 					</div>
+					<div className="col-span-8 flex h-full items-center justify-evenly">
+						<div
+							className={'relative h-[500px] w-[300px] rounded-full bg-black'}
+						>
+							<Image
+								src={'/image00001.jpeg'}
+								fill={true}
+								className={'object-cover'}
+								alt={'Save the date'}
+							/>
+						</div>
+						<div
+							className={'relative h-[500px] w-[300px] rounded-full bg-black'}
+						>
+							<Image
+								src={'/image00001.jpeg'}
+								fill={true}
+								className={'object-cover'}
+								alt={'Save the date'}
+							/>
+						</div>
+						<div
+							className={'relative h-[500px] w-[300px] rounded-full bg-black'}
+						>
+							<Image
+								src={'/image00001.jpeg'}
+								fill={true}
+								className={'object-cover'}
+								alt={'Save the date'}
+							/>
+						</div>
+					</div>
 				</div>
 			</div>
 			{/*<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>*/}
