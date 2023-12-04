@@ -99,3 +99,20 @@ html {
         line-height: 40rem;
     }
 }
+
+/* blup blup trigger animation */
+.animate-custom-blup-blup{
+    animation: blup-blup 1s ease-in-out infinite;
+}
+
+@keyframes blup-blup {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(105%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}

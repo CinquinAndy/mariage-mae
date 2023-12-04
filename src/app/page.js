@@ -7,7 +7,7 @@ export default function Home() {
 		<>
 			<div
 				className={
-					'relative flex h-screen w-screen flex-col items-center justify-center'
+					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
 				}
 			>
 				<Image

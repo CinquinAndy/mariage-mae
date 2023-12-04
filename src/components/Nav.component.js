@@ -5,11 +5,11 @@ import { NavPhoneComponent } from '@/components/NavPhone.component'
 import useVisitedPagesStore from '@/stores/visitedPagesStore'
 
 const navLinks = [
-	{ href: '/adresse', label: 'Adresse' },
-	{ href: '/save-the-date', label: 'Save the date' },
-	{ href: '/', label: 'Home', isCustomSvg: true },
-	{ href: '/lune-de-miel', label: 'Lune de miel' },
-	{ href: '/contact', label: 'Contact' },
+	{ href: '/contact', label: 'Contact', isNotifActive: false },
+	{ href: '/save-the-date', label: 'Save the date', isNotifActive: true },
+	{ href: '/', label: 'Home', isCustomSvg: true, isNotifActive: false },
+	{ href: '/lune-de-miel', label: 'Lune de miel', isNotifActive: true },
+	{ href: '/adresse', label: 'Adresse', isNotifActive: true },
 ]
 
 export function NavComponent() {
@@ -29,7 +29,7 @@ export function NavComponent() {
 			<nav className="hidden h-[100px] w-full items-center justify-center border-b border-gray-300 bg-white py-8 md:flex">
 				<div className="mx-auto h-full w-full max-w-xl px-4 md:px-6 xl:max-w-3xl xl:px-8">
 					<div className="flex h-full w-full items-center justify-between text-xs uppercase tracking-wider text-mae-950 no-underline xl:text-sm xl:tracking-widest">
-						{navLinks.map(({ href, label, isCustomSvg }) => (
+						{navLinks.map(({ href, label, isCustomSvg, isNotifActive }) => (
 							<Link
 								href={href}
 								key={href}
@@ -44,8 +44,8 @@ export function NavComponent() {
 								) : (
 									<>
 										{label}
-										{visitedPages[href] !== true && (
-											<span className="absolute -right-2.5 -top-0 h-1.5 w-1.5 rounded-full bg-red-700"></span>
+										{visitedPages[href] !== true && isNotifActive && (
+											<span className="animate-custom-blup-blup absolute -right-2.5 -top-0 h-1.5 w-1.5 rounded-full bg-red-700"></span>
 										)}
 									</>
 								)}

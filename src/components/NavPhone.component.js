@@ -11,20 +11,18 @@ export function NavPhoneComponent({ navLinks }) {
 
 	const handleClick = page => {
 		addVisitedPage(page)
+		removeVisitedPageIndicator(page)
+		setIsMenuOpen(false)
 	}
 
 	const countUnvisitedPages = () => {
 		return navLinks.reduce((count, link) => {
-			if (!visitedPages[link.href] && !link.isCustomSvg) {
+			if (!visitedPages[link.href] && !link.isCustomSvg && link.isNotifActive) {
 				count++
 			}
 			return count
 		}, 0)
 	}
-
-	useEffect(() => {
-		console.log('unvisitedCount', countUnvisitedPages())
-	}, [])
 
 	return (
 		<>
@@ -57,7 +55,7 @@ export function NavPhoneComponent({ navLinks }) {
 						>
 							<i className="fi fi-br-menu-burger text-xl"></i>
 							{countUnvisitedPages() !== 0 && (
-								<span className="absolute -right-3.5 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-center text-xs text-white">
+								<span className="animate-custom-blup-blup absolute -right-3.5 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-center text-xs text-white">
 									{countUnvisitedPages()}
 								</span>
 							)}
@@ -79,7 +77,7 @@ export function NavPhoneComponent({ navLinks }) {
 							<i className="fi fi-br-cross text-xl"></i>
 						</button>
 					</div>
-					{navLinks.map(({ href, label, isCustomSvg }) => (
+					{navLinks.map(({ href, label, isCustomSvg, isNotifActive }) => (
 						<Link
 							href={href}
 							key={href}
@@ -94,8 +92,8 @@ export function NavPhoneComponent({ navLinks }) {
 							) : (
 								<>
 									{label}
-									{visitedPages[href] !== null && (
-										<span className="absolute -right-2.5 -top-0 h-1.5 w-1.5 rounded-full bg-red-700"></span>
+									{visitedPages[href] !== true && isNotifActive && (
+										<span className="animate-custom-blup-blup absolute -right-2.5 -top-0 h-1.5 w-1.5 rounded-full bg-red-700"></span>
 									)}
 								</>
 							)}
