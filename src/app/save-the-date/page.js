@@ -4,7 +4,7 @@ export default function Page() {
 	return (
 		<div
 			className={
-				'relative -z-10 flex h-[calc(100vh-100px)] w-screen flex-col items-center justify-center'
+				'relative -z-10 flex h-[calc(100vh-200px)] w-screen flex-col items-center justify-center xl:h-[calc(100vh-100px)]'
 			}
 		>
 			<Image
@@ -30,7 +30,7 @@ export default function Page() {
 			/>
 			<div
 				className={
-					'mx-auto grid h-full w-full grid-cols-12 px-4 py-16 md:px-8 xl:px-32'
+					'mx-auto grid h-full w-full grid-cols-12 px-4 sm:py-16 md:px-8 xl:px-32'
 				}
 			>
 				<div
@@ -40,13 +40,13 @@ export default function Page() {
 				>
 					<h1
 						className={
-							'custom-title-color-gradient px-4 text-[8rem] leading-[8rem] md:text-[10rem] md:leading-[10rem] xl:text-[15rem] xl:leading-[15rem]'
+							'custom-title-color-gradient px-4 text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] xl:text-[15rem] xl:leading-[15rem]'
 						}
 					>
 						Save the Dates
 					</h1>
 				</div>
-				<div className="col-span-12 flex h-full -translate-y-[100px] transform items-center justify-evenly xl:col-span-8">
+				<div className="col-span-12 flex h-full -translate-y-[80px] transform items-center justify-evenly md:-translate-y-[50px] xl:col-span-8 xl:-translate-y-[100px]">
 					<div
 						className={
 							'relative mx-1 h-[300px] w-[150px] rounded-full md:h-[350px] md:w-[200px] xl:h-[450px] xl:w-[250px]'
