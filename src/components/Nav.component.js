@@ -9,7 +9,7 @@ const navLinks = [
 	{ href: '/save-the-date', label: 'Save the date', isNotifActive: true },
 	{ href: '/', label: 'Home', isCustomSvg: true, isNotifActive: false },
 	{ href: '/lune-de-miel', label: 'Lune de miel', isNotifActive: true },
-	{ href: '/adresse', label: 'Adresse', isNotifActive: true },
+	{ href: '/adresse', label: 'Adresses', isNotifActive: true },
 ]
 
 export function NavComponent() {
