@@ -15,6 +15,12 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontSize: {
+				'10xl': '10.5rem',
+				'11xl': '14rem',
+				'12xl': '17.5rem',
+				'13xl': '21rem',
+			},
 			textShadow: {
 				sm: '0 1px 2px var(--tw-shadow-color)',
 				DEFAULT: '0 2px 4px var(--tw-shadow-color)',

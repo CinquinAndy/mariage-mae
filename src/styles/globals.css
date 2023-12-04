@@ -116,3 +116,11 @@ html {
         transform: scale(100%);
     }
 }
+
+/* custom title gradient color to right, grey hard to grey light */
+.custom-title-color-gradient{
+    background: #030712;
+    background: linear-gradient(to right, #030712 0%, #e5e7eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

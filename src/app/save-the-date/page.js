@@ -5,61 +5,49 @@ export default function Page() {
 		<>
 			<div
 				className={
-					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
+					'relative -z-10 flex h-[calc(100vh-100px)] w-screen flex-col items-center justify-center'
 				}
 			>
 				<Image
 					src={'/willumarryme.jpg'}
 					fill={true}
-					className={'-z-10 hidden object-cover xl:block'}
+					className={'-z-10 hidden object-cover opacity-50 xl:block'}
 					alt={'will u marry me'}
 					quality={90}
 				/>
 				<Image
 					src={'/willumarryme_tablet.jpg'}
 					fill={true}
-					className={'-z-10 hidden object-cover md:block xl:hidden'}
+					className={'-z-10 hidden object-cover opacity-50 md:block xl:hidden'}
 					alt={'will u marry me'}
 					quality={90}
 				/>
 				<Image
 					src={'/willumarryme_phone.jpg'}
 					fill={true}
-					className={'-z-10 block object-cover md:hidden'}
+					className={'-z-10 block object-cover opacity-50 md:hidden'}
 					alt={'will u marry me'}
 					quality={90}
 				/>
 				<div
 					className={
-						'relative h-[85%] w-[90%] rounded border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
+						'mx-auto grid h-full w-full max-w-7xl grid-cols-12 py-16 md:px-4'
 					}
 				>
-					<div className={'absolute h-full w-full p-3'}>
-						<div
+					<div className={'col-span-4 flex h-full items-center justify-start'}>
+						<h1
 							className={
-								'relative flex h-full w-full items-center justify-center rounded bg-black/10'
+								'custom-title-color-gradient px-4 text-[8rem] leading-[8rem] md:text-[10rem] md:leading-[10rem] xl:text-[15rem] xl:leading-[15rem]'
 							}
 						>
-							<h1
-								className={
-									'text-center text-5xl text-white shadow-black text-shadow-lg lg:text-7xl xl:text-9xl'
-								}
-							>
-								Save the date
-							</h1>
-						</div>
+							Save the Dates
+						</h1>
 					</div>
-					<Image
-						src={'/background.jpg'}
-						alt={'Wedding'}
-						fill={true}
-						className={'-z-10 object-cover grayscale'}
-					/>
 				</div>
 			</div>
-			<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>
-				second bloc
-			</div>
+			{/*<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>*/}
+			{/*	second bloc*/}
+			{/*</div>*/}
 		</>
 	)
 }
