@@ -74,28 +74,28 @@ function MariageMaeEtRomainComponent() {
 					title="Date"
 					time="10 août 2024"
 					address="La réception débute à 14:15, la soirée à 18:00"
-					imageSrc="/cinquinandy_calendar_icon_elegant_vector_in_the_style_of_playfu_c86f32b2-9eea-4fd5-94c3-7eb968f11940.png"
+					imageSrc="/calendar_icon.png"
 					imageAlt="Calendar"
 				/>
 				<EventInfoComponent
 					title="Mairie"
 					time="10h00"
 					address="1 rue du Mollard, 74200 Anthy"
-					imageSrc="/cinquinandy_town_hall_icon_elegant_vector_in_the_style_of_playf_e801c3c3-ad1b-4af6-81eb-9787e17e7e51.png"
+					imageSrc="/town_icon.png"
 					imageAlt="town hall"
 				/>
 				<EventInfoComponent
 					title="Eglise"
 					time="12h00"
 					address="1 rue du Mollard, 74200 Anthy"
-					imageSrc="/cinquinandy_church_icon_elegant_vector_in_the_style_of_playful__b47209db-59c0-4ace-bb03-dec9d08a37cf.png"
+					imageSrc="/church_icon.png"
 					imageAlt="church"
 				/>
 				<EventInfoComponent
 					title="Soirée"
 					time="18h00"
 					address="15 rue des pécheurs, 74200 Anthy"
-					imageSrc="/cinquinandy_party_icon_elegant_vector_in_the_style_of_playful_u_350983ac-d3f0-4f15-b86f-e62304cd7dcb.png"
+					imageSrc="/party_icon.png"
 					imageAlt="party"
 				/>
 			</div>
