@@ -46,13 +46,13 @@ export default function Page() {
 						Contact
 					</h1>
 				</div>
-				<div className="col-span-12 flex h-full -translate-y-[40px] transform items-center justify-evenly md:-translate-y-[0px] xl:col-span-8 ">
+				<div className="col-span-12 flex h-full transform items-center justify-evenly xl:col-span-8 ">
 					<section
 						className={
 							'grid h-full w-full grid-cols-12 grid-rows-1 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'
 						}
 					>
-						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px] xl:row-start-2">
+						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px] xl:row-start-1">
 							<Image
 								src={'/image00013.jpeg'}
 								width={180}
@@ -70,7 +70,7 @@ export default function Page() {
 								&nbsp;rchallan74@gmail.com
 							</p>
 						</div>
-						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px] xl:row-start-2">
+						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px] xl:row-start-1">
 							<div
 								className={
 									'flex h-[180px] w-[180px] items-center justify-center'
