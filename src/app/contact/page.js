@@ -31,7 +31,7 @@ export default function Page() {
 			/>
 			<div
 				className={
-					'mx-auto grid h-full w-full grid-cols-12 px-4 sm:py-16 md:px-8 xl:px-32'
+					'mx-auto mt-16 grid h-full w-full grid-cols-12 px-4 sm:py-16 md:px-8 xl:mt-0 xl:px-32'
 				}
 			>
 				<div
