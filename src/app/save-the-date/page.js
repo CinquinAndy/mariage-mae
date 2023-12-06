@@ -7,7 +7,7 @@ export default function Page() {
 		<>
 			<div
 				className={
-					'relative -z-10 flex h-[calc(100vh-200px)] w-screen flex-col items-center justify-center xl:h-[calc(100vh-100px)]'
+					'relative -z-10 flex h-[calc(100vh-250px)] w-screen flex-col items-center justify-center xl:h-[calc(100vh-100px)]'
 				}
 			>
 				<Image
@@ -70,7 +70,7 @@ export default function Page() {
 							</h2>
 							<section
 								className={
-									'absolute -bottom-[150px] left-0 flex w-full flex-col items-center justify-center'
+									'absolute -bottom-[180px] left-0 flex w-full flex-col items-center justify-center md:-bottom-[150px]'
 								}
 							>
 								<div
@@ -85,7 +85,9 @@ export default function Page() {
 										}
 									>
 										<p className={''}>10 Févriers 2019</p>
-										<h2 className={'text-3xl'}>{`On s'est mit ensemble`}</h2>
+										<h2
+											className={'text-center text-3xl'}
+										>{`On s'est mit ensemble`}</h2>
 									</div>
 								</div>
 							</section>
@@ -110,7 +112,7 @@ export default function Page() {
 							</h2>
 							<section
 								className={
-									'absolute -bottom-[150px] left-0 flex w-full flex-col items-center justify-center'
+									'absolute -bottom-[180px] left-0 flex w-full flex-col items-center justify-center md:-bottom-[150px]'
 								}
 							>
 								<div
@@ -125,7 +127,9 @@ export default function Page() {
 										}
 									>
 										<p className={''}>10 Février 2022</p>
-										<h2 className={'text-3xl'}>Demande en mariage</h2>
+										<h2 className={'text-center text-3xl'}>
+											Demande en mariage
+										</h2>
 									</div>
 								</div>
 							</section>
@@ -150,7 +154,7 @@ export default function Page() {
 							</h2>
 							<section
 								className={
-									'absolute -bottom-[150px] left-0 flex w-full flex-col items-center justify-center'
+									'absolute -bottom-[180px] left-0 flex w-full flex-col items-center justify-center md:-bottom-[150px]'
 								}
 							>
 								<div
@@ -165,7 +169,7 @@ export default function Page() {
 										}
 									>
 										<p className={''}>10 août 2024</p>
-										<h2 className={'text-3xl'}>Mariage</h2>
+										<h2 className={'text-center text-3xl'}>Jour du mariage</h2>
 									</div>
 								</div>
 							</section>
