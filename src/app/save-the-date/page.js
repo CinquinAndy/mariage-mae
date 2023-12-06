@@ -84,8 +84,8 @@ export default function Page() {
 											'z-30 flex w-full flex-col items-center justify-center gap-2 '
 										}
 									>
-										<p className={''}>24 juin 2023</p>
-										<h2 className={'text-3xl'}>Mariage</h2>
+										<p className={''}>10 Févriers 2019</p>
+										<h2 className={'text-3xl'}>{`On s'est mit ensemble`}</h2>
 									</div>
 								</div>
 							</section>
@@ -124,8 +124,8 @@ export default function Page() {
 											'z-30 flex w-full flex-col items-center justify-center gap-2 '
 										}
 									>
-										<p className={''}>24 juin 2023</p>
-										<h2 className={'text-3xl'}>Mariage</h2>
+										<p className={''}>10 Février 2022</p>
+										<h2 className={'text-3xl'}>Demande en mariage</h2>
 									</div>
 								</div>
 							</section>
@@ -164,7 +164,7 @@ export default function Page() {
 											'z-30 flex w-full flex-col items-center justify-center gap-2 '
 										}
 									>
-										<p className={''}>24 juin 2023</p>
+										<p className={''}>10 août 2024</p>
 										<h2 className={'text-3xl'}>Mariage</h2>
 									</div>
 								</div>
