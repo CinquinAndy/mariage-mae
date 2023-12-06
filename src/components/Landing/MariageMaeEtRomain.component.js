@@ -71,7 +71,7 @@ function MariageMaeEtRomainComponent() {
 				}
 			>
 				<EventInfoComponent
-					title="Date"
+					title="Jour J"
 					time="10 août 2024"
 					address="La réception débute à 14:15, la soirée à 18:00"
 					imageSrc="/calendar_icon.png"
@@ -92,9 +92,9 @@ function MariageMaeEtRomainComponent() {
 					imageAlt="church"
 				/>
 				<EventInfoComponent
-					title="Soirée"
+					title="Réception"
 					time="18h00"
-					address="15 rue des pécheurs, 74200 Anthy"
+					address="Lieu Indiqué sur le Faire-Part"
 					imageSrc="/party_icon.png"
 					imageAlt="party"
 				/>
