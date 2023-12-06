@@ -49,17 +49,48 @@ export default function Page() {
 							Contact
 						</h1>
 					</div>
-					<div className="col-span-12 flex h-full -translate-y-[80px] transform items-center justify-evenly md:-translate-y-[0px] xl:col-span-8 xl:-translate-y-[100px]">
-						<div
+					<div className="col-span-12 flex h-full -translate-y-[40px] transform items-center justify-evenly md:-translate-y-[0px] xl:col-span-8 ">
+						<section
 							className={
-								'relative mx-1 h-[300px] w-[150px] rounded-full md:h-[350px] md:w-[200px] xl:h-[450px] xl:w-[250px]'
+								'grid h-full w-full grid-cols-12 gap-2 md:gap-4 xl:gap-8'
 							}
 						>
-							<section className={'h-full w-full grid-cols-12'}>
-								<div className="col-span-6"></div>
-								<div className="col-span-6"></div>
-							</section>
-						</div>
+							<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[500px]">
+								<h2 className={'text-3xl md:text-4xl lg:text-5xl'}>Romain</h2>
+								<p>
+									-&nbsp;<span className={'font-bold'}>Téléphone :</span>
+									&nbsp;06 78 00 73 39
+								</p>
+								<p>
+									-&nbsp;<span className={'font-bold'}>Email :</span>
+									&nbsp;rchallan74@gmail.com
+								</p>
+							</div>
+							<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[500px]">
+								<div
+									className={
+										'flex h-[200px] w-[200px] items-center justify-center'
+									}
+								>
+									<Image
+										src={'/image00013.jpeg'}
+										width={200}
+										height={200}
+										alt={'romain'}
+										className={'rounded-full object-cover'}
+									/>
+								</div>
+								<h2 className={'text-3xl md:text-4xl lg:text-5xl'}>Maeva</h2>
+								<p>
+									-&nbsp;<span className={'font-bold'}>Téléphone :</span>
+									&nbsp;06 16 62 51 37
+								</p>
+								<p>
+									-&nbsp;<span className={'font-bold'}>Email :</span>
+									&nbsp;maevacinquin1@gmail.com
+								</p>
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>
