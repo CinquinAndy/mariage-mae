@@ -81,7 +81,7 @@ export default function Page() {
 							<div className={'flex flex-col'}>
 								<p className={'text-sm italic opacity-80'}>14h15 - 15h30</p>
 								<p className={'text-sm'}>
-									614 avenue de sciez , 74140 Sciez Sur Leman
+									614 Avenue de Sciez, 74140 Sciez-sur-Léman
 								</p>
 							</div>
 							<p className={''}>
@@ -106,7 +106,7 @@ export default function Page() {
 							<div className={'flex flex-col'}>
 								<p className={'text-sm italic opacity-80'}>16h00 - 17h30</p>
 								<p className={'text-sm'}>
-									1 Rue Du Mollard, 74200 Anthy Sur Leman
+									1 Rue du Mollard, 74200 Anthy-sur-Léman
 								</p>
 							</div>
 							<p className={''}>
@@ -133,7 +133,7 @@ export default function Page() {
 									18h00 jusqu&apos;au bout de la nuit
 								</p>
 								<p className={'text-sm'}>
-									15 Rue Des Pêcheurs, 74200 Anthy Sur Leman
+									15 Rue des Pêcheurs, 74200 Anthy-sur-Léman
 								</p>
 							</div>
 							<p className={''}>

@@ -84,10 +84,10 @@ export default function Page() {
 											'z-30 flex w-full flex-col items-center justify-center gap-2 '
 										}
 									>
-										<p className={''}>10 Févriers 2019</p>
+										<p className={''}>10 Février 2019</p>
 										<h2
 											className={'text-center text-3xl'}
-										>{`On s'est mit ensemble`}</h2>
+										>{`On s'est mis ensemble`}</h2>
 									</div>
 								</div>
 							</section>

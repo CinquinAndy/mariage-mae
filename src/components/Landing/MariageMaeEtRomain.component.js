@@ -80,21 +80,21 @@ function MariageMaeEtRomainComponent() {
 				<EventInfoComponent
 					title="Mairie"
 					time="14h15"
-					address="614 Av. de Sciez, 74140 Sciez"
+					address="614 Avenue de Sciez, 74140 Sciez-sur-Léman"
 					imageSrc="/town_icon.png"
 					imageAlt="town hall"
 				/>
 				<EventInfoComponent
 					title="Eglise"
 					time="16h00"
-					address="1 rue du Mollard, 74200 Anthy"
+					address="1 Rue du Mollard, 74200 Anthy-sur-Léman"
 					imageSrc="/church_icon.png"
 					imageAlt="church"
 				/>
 				<EventInfoComponent
 					title="Réception"
 					time="18h00"
-					address="15 rue des pécheurs, 74200 Anthy"
+					address="15 Rue des Pêcheurs, 74200 Anthy-sur-Léman"
 					imageSrc="/party_icon.png"
 					imageAlt="party"
 				/>
@@ -309,7 +309,7 @@ function MariageMaeEtRomainComponent() {
 							<br />
 							{`où 'Cendrillon rencontre James Bond'.`}
 							<br />
-							{`Pantoufles en verres non fournies.`}
+							{`Pantoufles en verre non fournies.`}
 						</p>
 					</div>
 				</div>
