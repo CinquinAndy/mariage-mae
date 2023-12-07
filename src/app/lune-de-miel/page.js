@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import TitleOrnementedComponent from '@/components/Landing/TitleOrnemented.component'
+import { SectionComponent } from '@/components/Landing/Section.component'
 
 export default function Page() {
 	return (
@@ -58,7 +60,28 @@ export default function Page() {
 				</div>
 			</div>
 			<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>
-				second bloc
+				<TitleOrnementedComponent title={'On se dit oui !'} ornement={false} />
+				<SectionComponent
+					imageSrc={'/image00014.jpeg'}
+					imageAlt={'Mariage de Mae et Romain'}
+					title={'On se dit oui !'}
+					isReverse={false}
+					text={
+						<p className={''}>
+							{`Le 10 août 2024, nous nous dirons oui pour la vie,`}
+							<br />
+							{`Et nous vous invitons à célébrer avec nous,`}
+							<br />
+							{`Ce jour qui sera le plus beau de notre vie,`}
+							<br />
+							{`En espérant que vous serez des nôtres,`}
+							<br />
+							{`Pour partager avec nous, ce moment de bonheur,`}
+							<br />
+							{`Et nous accompagner dans notre vie de tous les jours.`}
+						</p>
+					}
+				/>
 			</div>
 		</>
 	)
