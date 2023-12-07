@@ -62,7 +62,7 @@ export default function Page() {
 			</div>
 			<div
 				className={
-					'mx-auto flex max-w-7xl flex-col gap-16 px-2 py-16 md:px-4 xl:px-8'
+					'mx-auto flex max-w-7xl flex-col gap-32 px-2 py-16 md:px-4 xl:px-8'
 				}
 			>
 				<TitleOrnementedComponent title={'Voyage à Orlando'} ornement={true} />
@@ -125,6 +125,28 @@ export default function Page() {
 							partager avec vous à notre retour. Préparez-vous à entendre des
 							histoires passionnantes et à voir des photos éblouissantes de
 							notre escapade ensoleillée en Floride !
+						</p>
+					}
+				/>
+
+				<SectionComponent
+					imageSrc={'/disney.jpg'}
+					imageAlt={'disney'}
+					title={'Disney World'}
+					isReverse={true}
+					text={
+						<p className={''}>
+							Prochaine escale de notre aventure en Floride :
+							<br />
+							<br />
+							le monde enchanté de Disney World ! <br />
+							Là où la magie rencontre la réalité, nous nous préparons à plonger
+							dans un univers de contes de fées, de parades éblouissantes et de
+							moments féeriques.
+							<br />
+							<br />
+							Nous sommes impatients de partager avec vous la joie et
+							l&apos;émerveillement de cette étape fantastique de notre voyage.
 						</p>
 					}
 				/>
