@@ -31,18 +31,18 @@ export default function Page() {
 			/>
 			<div
 				className={
-					'mx-auto mt-16 grid h-full w-full grid-cols-12 px-4 sm:py-16 md:px-8 xl:mt-0 xl:px-32'
+					'z-20 mx-auto mt-16 grid h-full w-full grid-cols-12 overflow-visible px-4 sm:py-16 md:px-8 xl:mt-0 xl:px-32'
 				}
 			>
 				<div
 					className={
-						'col-span-12 flex h-full items-center justify-start xl:col-span-4'
+						'z-20 col-span-12 flex items-center justify-start xl:col-span-5 xl:flex-col'
 					}
 				>
 					<div className={'flex w-full flex-col justify-center'}>
 						<h1
 							className={
-								'custom-title-color-gradient px-4 text-center text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] lg:text-start xl:text-[15rem] xl:leading-[15rem]'
+								'custom-title-color-gradient z-20 px-4 text-center text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] lg:text-start xl:text-[15rem] xl:leading-[15rem]'
 							}
 						>
 							Contact
@@ -54,7 +54,7 @@ export default function Page() {
 						</p>
 					</div>
 				</div>
-				<div className="col-span-12 flex h-full transform items-center justify-evenly xl:col-span-8 ">
+				<div className="z-10 col-span-12 mt-0 flex h-full transform items-center justify-evenly md:mt-16 xl:col-span-7 xl:mt-64">
 					<section
 						className={
 							'grid h-full w-full grid-cols-12 grid-rows-1 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'
