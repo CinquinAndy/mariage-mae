@@ -79,14 +79,14 @@ function MariageMaeEtRomainComponent() {
 				/>
 				<EventInfoComponent
 					title="Mairie"
-					time="10h00"
+					time="14h15"
 					address="1 rue du Mollard, 74200 Anthy"
 					imageSrc="/town_icon.png"
 					imageAlt="town hall"
 				/>
 				<EventInfoComponent
 					title="Eglise"
-					time="12h00"
+					time="16h00"
 					address="1 rue du Mollard, 74200 Anthy"
 					imageSrc="/church_icon.png"
 					imageAlt="church"
@@ -94,7 +94,7 @@ function MariageMaeEtRomainComponent() {
 				<EventInfoComponent
 					title="Réception"
 					time="18h00"
-					address="Lieu Indiqué sur le Faire-Part"
+					address="15 rue des pécheurs, 74200 Anthy"
 					imageSrc="/party_icon.png"
 					imageAlt="party"
 				/>

@@ -5,7 +5,7 @@ export default function Page() {
 	return (
 		<div
 			className={
-				'relative -z-10 flex h-[calc(100vh-200px)] w-screen flex-col items-center justify-center xl:h-[calc(100vh-100px)]'
+				'relative -z-10 flex min-h-[calc(100vh-200px)] w-screen flex-col items-center justify-center xl:h-screen'
 			}
 		>
 			<Image
@@ -36,7 +36,7 @@ export default function Page() {
 			>
 				<div
 					className={
-						'z-20 col-span-12 flex items-center justify-start xl:col-span-5 xl:flex-col'
+						'z-20 col-span-12 flex h-full items-center justify-start xl:col-span-5 xl:flex-col'
 					}
 				>
 					<div className={'flex w-full flex-col justify-center'}>
@@ -54,13 +54,13 @@ export default function Page() {
 						</p>
 					</div>
 				</div>
-				<div className="z-10 col-span-12 mt-0 flex h-full transform items-center justify-evenly md:mt-16 xl:col-span-7 xl:mt-64">
+				<div className="z-10 col-span-12 flex transform items-center justify-evenly pt-0 md:pt-16 xl:col-span-7 xl:pt-64">
 					<section
 						className={
-							'grid h-full w-full grid-cols-12 grid-rows-1 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'
+							'grid h-full w-full grid-cols-12 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'
 						}
 					>
-						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px] xl:row-start-1">
+						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px]">
 							<div
 								className={
 									'flex h-[180px] w-[180px] items-center justify-center'
@@ -86,7 +86,7 @@ export default function Page() {
 								</span>
 							</p>
 						</div>
-						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px] xl:row-start-1">
+						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px]">
 							<Image
 								src={'/image00013.jpeg'}
 								width={180}
