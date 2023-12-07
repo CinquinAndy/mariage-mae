@@ -55,7 +55,7 @@ export default function Page() {
 						src={'/honeymoon.png'}
 						alt={'Wedding'}
 						fill={true}
-						className={'-z-10 object-cover grayscale'}
+						className={'-z-10 object-cover opacity-90 grayscale'}
 					/>
 				</div>
 			</div>
