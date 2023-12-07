@@ -150,6 +150,30 @@ export default function Page() {
 						</p>
 					}
 				/>
+
+				<SectionComponent
+					imageSrc={'/universal.jpg'}
+					imageAlt={'universal'}
+					title={'Universal Studios'}
+					isReverse={false}
+					text={
+						<p className={''}>
+							Suite à notre escapade enchantée à Disney World, nous poursuivons
+							notre aventure en Floride en nous dirigeant vers
+							l&apos;époustouflant univers d&apos;Universal Studios Orlando.
+							<br />
+							<br />
+							Là, nous plongerons ensemble dans un monde où les films prennent
+							vie, où chaque tournant révèle une nouvelle aventure palpitante.
+							<br />
+							<br />
+							Nous sommes impatients de déambuler dans les allées thématiques,
+							de nous émerveiller devant les spectacles éblouissants et de
+							ressentir l&apos;excitation des montagnes russes à couper le
+							souffle.
+						</p>
+					}
+				/>
 			</div>
 		</>
 	)
