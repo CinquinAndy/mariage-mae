@@ -80,7 +80,7 @@ function MariageMaeEtRomainComponent() {
 				<EventInfoComponent
 					title="Mairie"
 					time="14h15"
-					address="1 rue du Mollard, 74200 Anthy"
+					address="614 Av. de Sciez, 74140 Sciez"
 					imageSrc="/town_icon.png"
 					imageAlt="town hall"
 				/>
