@@ -52,7 +52,7 @@ export default function Page() {
 						</div>
 					</div>
 					<Image
-						src={'/background.jpg'}
+						src={'/honeymoon.png'}
 						alt={'Wedding'}
 						fill={true}
 						className={'-z-10 object-cover grayscale'}
@@ -60,7 +60,10 @@ export default function Page() {
 				</div>
 			</div>
 			<div className={'mx-auto max-w-7xl px-2 py-16 md:px-4 xl:px-8'}>
-				<TitleOrnementedComponent title={'On se dit oui !'} ornement={false} />
+				<TitleOrnementedComponent
+					title={'Voyage à Orlando !'}
+					ornement={true}
+				/>
 				<SectionComponent
 					imageSrc={'/image00014.jpeg'}
 					imageAlt={'Mariage de Mae et Romain'}
