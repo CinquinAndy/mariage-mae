@@ -71,72 +71,80 @@ export default function Page() {
 				/>
 
 				<SectionComponent
-					imageSrc={'/florida.jpg'}
-					imageAlt={'Floride'}
-					title={'Floride'}
+					imageSrc={'/townhall_bg.png'}
+					imageAlt={'townhall'}
+					title={'La cérémonie civile'}
 					isReverse={false}
 					text={
-						<p className={''}>
-							Notre prochain chapitre commence sous les palmiers et le soleil
-							éclatant de la Floride !
-							<br />
-							<br />
-							Cette terre de merveilles, connue pour ses plages de sable fin,
-							ses eaux cristallines et son ambiance ensoleillée, sera le théâtre
-							de notre aventure romantique.
-							<br />
-							<br />
-							Nous sommes impatients de vivre ces moments magiques et de les
-							partager avec vous à notre retour. Préparez-vous à entendre des
-							histoires passionnantes et à voir des photos éblouissantes de
-							notre escapade ensoleillée en Floride !
-						</p>
+						<>
+							<h2 className={'text-3xl'}>Mairie de Sciez</h2>
+							<div className={'flex flex-col'}>
+								<p className={'text-sm italic opacity-80'}>14h15 - 15h30</p>
+								<p className={'text-sm'}>
+									614 avenue de sciez , 74140 Sciez Sur Leman
+								</p>
+							</div>
+							<p className={''}>
+								Dans la noble enceinte de la mairie de Sciez, notre histoire
+								d&apos;amour se verra couronnée d&apos;un engagement solennel.
+								Sous le regard bienveillant de ceux qui nous sont chers, nous
+								tisserons les fils dorés de nos vies en une seule trame,
+								échangeant nos vœux dans un élan de joie et d&apos;espoir.
+							</p>
+						</>
 					}
 				/>
 
 				<SectionComponent
-					imageSrc={'/disney.jpg'}
-					imageAlt={'disney'}
-					title={'Disney World'}
+					imageSrc={'/church_bg.png'}
+					imageAlt={'church'}
+					title={'La cérémonie religieuse'}
 					isReverse={true}
 					text={
-						<p className={''}>
-							Prochaine escale de notre aventure en Floride :
-							<br />
-							<br />
-							le monde enchanté de Disney World ! <br />
-							Là où la magie rencontre la réalité, nous nous préparons à plonger
-							dans un univers de contes de fées, de parades éblouissantes et de
-							moments féeriques.
-							<br />
-							<br />
-							Nous sommes impatients de partager avec vous la joie et
-							l&apos;émerveillement de cette étape fantastique de notre voyage.
-						</p>
+						<>
+							<h2 className={'text-3xl'}>Saint Barthélémy</h2>
+							<div className={'flex flex-col'}>
+								<p className={'text-sm italic opacity-80'}>16h00 - 17h30</p>
+								<p className={'text-sm'}>
+									1 Rue Du Mollard, 74200 Anthy Sur Leman
+								</p>
+							</div>
+							<p className={''}>
+								Au cœur de l&apos;église, là où la lumière danse à travers les
+								vitraux, nos âmes se joindront dans une harmonie céleste. Entre
+								ces murs sacrés, imprégnés d&apos;amour éternel, nous avancerons
+								vers l&apos;autel, bénis par la grâce et enveloppés dans un
+								amour pur et infini.
+							</p>
+						</>
 					}
 				/>
 
 				<SectionComponent
-					imageSrc={'/universal.jpg'}
-					imageAlt={'universal'}
-					title={'Universal Studios'}
+					imageSrc={'/reception_bg.png'}
+					imageAlt={'reception_bg'}
+					title={'La soirée'}
 					isReverse={false}
 					text={
-						<p className={''}>
-							Suite à notre escapade enchantée à Disney World, nous poursuivons
-							notre aventure en Floride en nous dirigeant vers
-							l&apos;époustouflant univers d&apos;Universal Studios Orlando.
-							<br />
-							<br />
-							Là, nous plongerons ensemble dans un monde où les films prennent
-							vie, où chaque tournant révèle une nouvelle aventure palpitante.
-							<br />
-							<br />
-							Nous sommes impatients de déambuler dans les allées thématiques,
-							de nous émerveiller devant les spectacles éblouissants et de
-							ressentir l&apos;excitation des montagnes russes à couper le
-							souffle.
-						</p>
+						<>
+							<h2 className={'text-3xl'}>Salle d&apos;Anthy sur Leman</h2>
+							<div className={'flex flex-col'}>
+								<p className={'text-sm italic opacity-80'}>
+									18h00 jusqu&apos;au bout de la nuit
+								</p>
+								<p className={'text-sm'}>
+									15 Rue Des Pêcheurs, 74200 Anthy Sur Leman
+								</p>
+							</div>
+							<p className={''}>
+								Et lorsque le soir viendra, nous nous rassemblerons pour une
+								célébration empreinte de joie et d&apos;éclat. Dans
+								l&apos;ambiance festive de notre réception, entourés par
+								l&apos;affection et les sourires de nos proches, nous danserons
+								au rythme de notre bonheur partagé, illuminant la nuit de notre
+								amour rayonnant.
+							</p>
+						</>
 					}
 				/>
 			</div>
