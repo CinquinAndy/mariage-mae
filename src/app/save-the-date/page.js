@@ -46,7 +46,7 @@ export default function Page() {
 								'custom-title-color-gradient px-4 text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] xl:text-[15rem] xl:leading-[15rem]'
 							}
 						>
-							Save the Dates
+							Save the Date
 						</h1>
 					</div>
 					<div className="col-span-12 flex h-full -translate-y-[80px] transform items-center justify-evenly md:-translate-y-[0px] xl:col-span-8 xl:-translate-y-[100px]">
@@ -184,7 +184,9 @@ export default function Page() {
 				}
 			>
 				<Link
-					href={'/'}
+					href={
+						'https://docs.google.com/forms/d/e/1FAIpQLSerci9E0oDa1WfY7s6GyEM857JgdzlC7jFhuSqOwoFYPcTdBA/viewform'
+					}
 					className={
 						'group relative h-[85%] w-[90%] rounded-xl border border-gray-100 shadow-2xl transition-all hover:scale-105 hover:cursor-pointer hover:border-2 hover:border-gray-200 hover:shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
 					}
