@@ -41,7 +41,18 @@ function ModalImportantComponent(props) {
 							<Button color="default" variant="light" onPress={onClose}>
 								Je visite le site
 							</Button>
-							<Button color="primary" onPress={onClose}>
+							<Button
+								color="primary"
+								onPress={() => {
+									// redirect on gform : https://docs.google.com/forms/d/e/1FAIpQLSerci9E0oDa1WfY7s6GyEM857JgdzlC7jFhuSqOwoFYPcTdBA/viewform
+									window.open(
+										'https://docs.google.com/forms/d/e/1FAIpQLSerci9E0oDa1WfY7s6GyEM857JgdzlC7jFhuSqOwoFYPcTdBA/viewform',
+										'_blank'
+									)
+									// then close the modal
+									onClose()
+								}}
+							>
 								Je viens !
 							</Button>
 						</ModalFooter>
