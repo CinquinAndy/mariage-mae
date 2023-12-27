@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
 import MariageMaeEtRomainComponent from '@/components/Landing/MariageMaeEtRomain.component'
+import ModalImportantComponent from '@/components/ModalImportant.component'
 
 export default function Home() {
 	return (
 		<>
+			<ModalImportantComponent />
 			<div
 				className={
 					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
