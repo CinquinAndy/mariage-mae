@@ -13,31 +13,36 @@ function ModalImportantComponent(props) {
 	const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
 	return (
-		<Modal isOpen={isOpen} placement={'auto'} onOpenChange={onOpenChange}>
+		<Modal
+			backdrop={'blur'}
+			isOpen={!isOpen}
+			placement={'auto'}
+			onOpenChange={onOpenChange}
+			size={'xl'}
+		>
 			<ModalContent>
 				{onClose => (
 					<>
 						<ModalHeader className="flex flex-col gap-1">
-							Modal Title
+							{`N'oubliez pas de nous confirmer votre présence !`}
 						</ModalHeader>
 						<ModalBody>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-								pulvinar risus non risus hendrerit venenatis. Pellentesque sit
-								amet hendrerit risus, sed porttitor quam.
+								Vous voulez venir à notre mariage ? Partager ce moment
+								fantastique avec nous ?
 							</p>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-								pulvinar risus non risus hendrerit venenatis. Pellentesque sit
-								amet hendrerit risus, sed porttitor quam.
+								{
+									"N'oubliez pas de nous confirmer votre présence en cliquant sur le bouton ci-dessous !"
+								}
 							</p>
 						</ModalBody>
 						<ModalFooter>
-							<Button color="danger" variant="light" onPress={onClose}>
-								Close
+							<Button color="default" variant="light" onPress={onClose}>
+								Je visite le site
 							</Button>
 							<Button color="primary" onPress={onClose}>
-								Action
+								Je viens !
 							</Button>
 						</ModalFooter>
 					</>
