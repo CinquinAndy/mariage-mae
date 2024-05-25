@@ -313,31 +313,6 @@ function MariageMaeEtRomainComponent() {
 						</p>
 					</div>
 				</div>
-				<div
-					className={'col-span-12 grid w-full grid-cols-12 gap-8 pt-8 md:pt-16'}
-				>
-					<div className={'col-span-6 flex flex-col gap-4 text-right'}>
-						<div className={'flex flex-col'}>
-							<h2 className={'text-3xl'}>Thème couleur</h2>
-							<p className={'font-semibold'}>→ Blanc & bordeaux</p>
-						</div>
-						<p className={'italic'}>
-							{`Imaginez que vous êtes le bouquet final d'un grand cru :`}
-							<br />
-							{`éclatant de bordeaux avec des notes de blanc.`}
-						</p>
-					</div>
-					<div className={'col-span-6 flex items-center justify-start'}>
-						<Image
-							src={'/palet_icon.webp'}
-							alt={'Dress Code'}
-							width={200}
-							height={200}
-							quality={90}
-							className={'h-[200px] rounded object-cover shadow-2xl md:h-auto'}
-						/>
-					</div>
-				</div>
 			</div>
 		</div>
 	)
