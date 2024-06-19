@@ -101,7 +101,7 @@ function MariageMaeEtRomainComponent() {
 			</div>
 			<div
 				className={
-					'relative grid w-full grid-cols-12 gap-8 px-8 text-center md:gap-8 md:px-16 xl:px-32'
+					'relative grid w-full grid-cols-12 gap-2 px-8 text-center md:gap-8 md:px-16 xl:px-32'
 				}
 			>
 				<div
@@ -202,7 +202,7 @@ function MariageMaeEtRomainComponent() {
 			<TitleOrnementedComponent title={'Nos témoins'} ornement={false} />
 			<div
 				className={
-					'relative grid w-full grid-cols-12 gap-8 px-8 text-start md:gap-8 md:px-16 xl:px-32'
+					'relative mb-8 grid w-full grid-cols-12 gap-2 px-8 text-start md:gap-8 md:px-16 xl:px-32'
 				}
 			>
 				<div className={'col-span-12 flex flex-col'}>
@@ -220,7 +220,7 @@ function MariageMaeEtRomainComponent() {
 						`}
 					</p>
 				</div>
-				<div className={'col-span-12 flex flex-col gap-4 md:col-span-6'}>
+				<div className={'col-span-12 mt-8 flex flex-col gap-4 md:col-span-6'}>
 					<div>
 						<h2 className={'text-4xl'}>Témoins de la mariée</h2>
 						<p className={''}>
@@ -253,7 +253,11 @@ function MariageMaeEtRomainComponent() {
 						></Image>
 					</div>
 				</div>
-				<div className={'col-span-12 flex h-full flex-col gap-4 md:col-span-6'}>
+				<div
+					className={
+						'col-span-12 mt-8 flex h-full flex-col gap-4 md:col-span-6'
+					}
+				>
 					<div>
 						<h2 className={'text-4xl'}>Témoins du marié</h2>
 						<p className={''}>
@@ -289,7 +293,7 @@ function MariageMaeEtRomainComponent() {
 				}
 			>
 				<div className={'col-span-12 grid w-full grid-cols-12 gap-8'}>
-					<div className={'col-span-6 flex items-center justify-end'}>
+					<div className={'col-span-5 flex items-center justify-end'}>
 						<Image
 							src={'/suit_icon.webp'}
 							alt={'Dress Code'}
@@ -299,7 +303,7 @@ function MariageMaeEtRomainComponent() {
 							className={'h-[200px] rounded object-cover shadow-2xl md:h-auto'}
 						/>
 					</div>
-					<div className={'col-span-6 flex flex-col gap-4 text-left'}>
+					<div className={'col-span-7 flex flex-col gap-2 text-left'}>
 						<div className={'flex flex-col'}>
 							<h2 className={'text-3xl'}>Dress code</h2>
 							<p className={'font-semibold'}>→ Romantique chic</p>
