@@ -49,17 +49,25 @@ export function NavPhoneComponent({ navLinks }) {
 								url={'/typoLogo.svg'}
 							></CustomSvgComponent>
 						</Link>
-						<button
-							className={'relative focus:outline-none'}
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
-						>
-							<i className="fi fi-br-menu-burger text-xl"></i>
-							{countUnvisitedPages() !== 0 && (
-								<span className="animate-custom-blup-blup absolute -right-3.5 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-center text-xs text-white">
-									{countUnvisitedPages()}
-								</span>
-							)}
-						</button>
+						<div className="flex items-center">
+							<Link
+								href={'/photos'}
+								className="relative mr-6 flex h-9 w-9 items-center justify-center rounded-full bg-mae-950"
+							>
+								<i className="fi fi-rr-camera translate-y-[2px] transform text-sm text-white"></i>
+							</Link>
+							<button
+								className={'relative focus:outline-none'}
+								onClick={() => setIsMenuOpen(!isMenuOpen)}
+							>
+								<i className="fi fi-br-menu-burger text-xl"></i>
+								{countUnvisitedPages() !== 0 && (
+									<span className="animate-custom-blup-blup absolute -right-3.5 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-center text-xs text-white">
+										{countUnvisitedPages()}
+									</span>
+								)}
+							</button>
+						</div>
 					</div>
 				</div>
 			</nav>

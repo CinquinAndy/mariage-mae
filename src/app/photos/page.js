@@ -31,80 +31,59 @@ export default function Page() {
 			/>
 			<div
 				className={
-					'z-20 mx-auto mt-16 grid h-full w-full grid-cols-12 overflow-visible px-4 sm:py-16 md:px-8 xl:mt-0 xl:px-32'
+					'z-20 mx-auto grid h-full w-full grid-cols-12 overflow-visible px-4 md:px-8 xl:mt-0 xl:px-32'
 				}
 			>
-				<div
-					className={
-						'z-20 col-span-12 flex h-full items-center justify-start xl:col-span-5 xl:flex-col'
-					}
-				>
-					<div className={'flex w-full flex-col justify-center'}>
-						<h1
-							className={
-								'custom-title-color-gradient z-20 px-4 text-center text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] lg:text-start xl:text-[15rem] xl:leading-[15rem]'
-							}
-						>
-							Contact
-						</h1>
-						<p
-							className={'text-center text-sm italic opacity-75 lg:text-start'}
-						>
-							{`Pour toutes questions, n'hésitez pas à nous contacter par téléphone !`}
+				<div className="z-10 col-span-12 flex transform items-center justify-evenly pt-0 xl:col-span-12">
+					<div className="w-full max-w-2xl rounded-lg bg-white p-8 shadow-xl">
+						<h2 className="mb-4 text-5xl font-semibold">Photos</h2>
+						<p className="mb-4">
+							Nous serions ravis que vous partagiez vos photos de notre mariage
+							! Voici comment procéder :
 						</p>
-					</div>
-				</div>
-				<div className="z-10 col-span-12 flex transform items-center justify-evenly pt-0 md:pt-16 xl:col-span-7 xl:pt-64">
-					<section
-						className={
-							'grid h-full w-full grid-cols-12 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'
-						}
-					>
-						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px]">
-							<div
-								className={
-									'flex h-[180px] w-[180px] items-center justify-center'
+						<ol className="mb-4 list-decimal pl-5">
+							<div>
+								Visitez{' '}
+								<Link
+									href="https://photos-wedding.cinquin-maeva.com"
+									className="z-50 cursor-pointer text-mae-950 underline"
+								>
+									photos-wedding.cinquin-maeva.com
+								</Link>
+							</div>
+							<li>
+								Utilisez les identifiants suivants :
+								<ul className="mt-2 list-disc pl-5">
+									<li>
+										{"Nom d'utilisateur :"} <strong>photos</strong>
+									</li>
+									<li>
+										Mot de passe : <strong>mariage_mae_romain</strong>
+									</li>
+								</ul>
+							</li>
+							<div className={'pt-4'}>
+								{
+									"Ensuite, allez dans 'Albums collaboratif', vous pouvez maintenant mettre vos photos ici !"
+								}
+							</div>
+							<Link
+								className={'z-50 cursor-pointer pb-4 text-mae-950 underline'}
+								href={
+									'https://photos-wedding.cinquin-maeva.com/apps/photos/sharedalbums/Mariage%20Mae%20&%20Romain%20(mariage)'
 								}
 							>
-								<Image
-									src={'/image00002.jpeg'}
-									width={180}
-									height={180}
-									alt={'romain'}
-									className={'rotate-3 rounded-xl object-cover'}
-								/>
-							</div>
-							<h2 className={'text-3xl md:text-4xl lg:text-5xl'}>Maeva</h2>
-							<p>
-								-&nbsp;<span className={'font-bold'}>Téléphone :</span>
-								<span className={'underline'}>&nbsp;06 16 62 51 37</span>
-							</p>
-							<p>
-								-&nbsp;<span className={'font-bold'}>Email :</span>
-								<span className={'underline'}>
-									&nbsp;maevacinquin1@gmail.com
-								</span>
-							</p>
-						</div>
-						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px]">
-							<Image
-								src={'/image00013.jpeg'}
-								width={180}
-								height={180}
-								alt={'romain'}
-								className={'-rotate-3 rounded-xl object-cover'}
-							/>
-							<h2 className={'text-3xl md:text-4xl lg:text-5xl'}>Romain</h2>
-							<Link href={'tel:+33678007339'}>
-								-&nbsp;<span className={'font-bold'}>Téléphone :</span>
-								<span className={'underline'}>&nbsp;06 78 00 73 39</span>
+								{"Lien vers l'album"}
 							</Link>
-							<Link href={'mailto:rchallan74@gmail.com'}>
-								-&nbsp;<span className={'font-bold'}>Email :</span>
-								<span className={'underline'}>&nbsp;rchallan74@gmail.com</span>
-							</Link>
-						</div>
-					</section>
+							<br />
+							<br />
+							<li>Envoyez vos photos préférées de notre journée spéciale !</li>
+						</ol>
+						<p>
+							Nous avons hâte de voir tous ces beaux souvenirs à travers vos
+							yeux. Merci !
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

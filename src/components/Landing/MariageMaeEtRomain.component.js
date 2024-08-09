@@ -106,7 +106,7 @@ function MariageMaeEtRomainComponent() {
 			>
 				<div
 					className={
-						'col-span-6 flex w-full flex-col items-center justify-center gap-16'
+						'col-span-12 flex w-full flex-col items-center justify-center gap-16 md:col-span-6'
 					}
 				>
 					<Image
@@ -129,7 +129,7 @@ function MariageMaeEtRomainComponent() {
 				</div>
 				<div
 					className={
-						'col-span-6 flex w-full flex-col items-center justify-center gap-16'
+						'col-span-12 flex w-full flex-col items-center justify-center gap-16 md:col-span-6'
 					}
 				>
 					<Image
