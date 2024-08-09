@@ -58,7 +58,7 @@ export default function Page() {
 										{"Nom d'utilisateur :"} <strong>mariage</strong>
 									</li>
 									<li>
-										Mot de passe : <strong>mariage</strong>
+										Mot de passe : <strong>mariage_mae_romain</strong>
 									</li>
 								</ul>
 							</li>
@@ -78,6 +78,18 @@ export default function Page() {
 							<br />
 							<br />
 							<li>Envoyez vos photos préférées de notre journée spéciale !</li>
+							<br />
+							<br />
+							<p>
+								vous pouvez nous les envoyés directement via google photos si
+								vous le souhaitez aussi, ici :{' '}
+								<Link
+									className={'z-50 cursor-pointer text-mae-950 underline'}
+									href={'https://photos.app.goo.gl/qfttVGp1hqpxZhHi7'}
+								>
+									Album google photos
+								</Link>
+							</p>
 						</ol>
 						<p>
 							Nous avons hâte de voir tous ces beaux souvenirs à travers vos
