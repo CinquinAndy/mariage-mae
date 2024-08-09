@@ -30,7 +30,7 @@ export function NavPhoneComponent({ navLinks }) {
 				className={`${
 					isMenuOpen
 						? 'hidden'
-						: 'flex h-[100px] w-full items-center justify-center border-b border-gray-300 bg-white py-8 md:hidden'
+						: 'z-50 flex h-[100px] w-full items-center justify-center border-b border-gray-300 bg-white py-8 md:hidden'
 				}`}
 			>
 				<div
@@ -73,7 +73,9 @@ export function NavPhoneComponent({ navLinks }) {
 			</nav>
 			<nav
 				className={`${
-					isMenuOpen ? 'fixed h-screen w-screen bg-white md:hidden' : 'hidden'
+					isMenuOpen
+						? 'fixed z-50 h-screen w-screen bg-white md:hidden'
+						: 'hidden'
 				}`}
 			>
 				<div className="relative flex h-full w-full flex-col items-center justify-start gap-16 pt-32">

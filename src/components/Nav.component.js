@@ -26,7 +26,7 @@ export function NavComponent() {
 			{/* Phone version */}
 			<NavPhoneComponent navLinks={navLinks} />
 			{/* Desktop version */}
-			<nav className="relative hidden h-[100px] w-full items-center justify-center border-b border-gray-300 bg-white py-8 md:flex">
+			<nav className="relative z-[100] hidden h-[100px] w-full items-center justify-center border-b border-gray-300 bg-white py-8 md:flex">
 				<div
 					className={'absolute right-8 top-8 flex items-center justify-center'}
 				>

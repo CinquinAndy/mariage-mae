@@ -5,7 +5,7 @@ export default function Page() {
 	return (
 		<div
 			className={
-				'relative -z-10 flex min-h-[calc(100vh-200px)] w-screen flex-col items-center justify-center xl:h-screen'
+				'relative z-10 flex min-h-[calc(100vh-200px)] w-screen flex-col items-center justify-center xl:h-screen'
 			}
 		>
 			<Image
@@ -55,10 +55,10 @@ export default function Page() {
 								Utilisez les identifiants suivants :
 								<ul className="mt-2 list-disc pl-5">
 									<li>
-										{"Nom d'utilisateur :"} <strong>photos</strong>
+										{"Nom d'utilisateur :"} <strong>mariage</strong>
 									</li>
 									<li>
-										Mot de passe : <strong>mariage_mae_romain</strong>
+										Mot de passe : <strong>mariage</strong>
 									</li>
 								</ul>
 							</li>
