@@ -8,7 +8,7 @@ function MariageMaeEtRomainComponent() {
 	return (
 		<div
 			className={
-				'mx-auto flex max-w-7xl flex-col gap-16 px-2 py-16 md:gap-24 md:px-4 xl:gap-32 xl:px-8'
+				'mx-auto flex max-w-7xl flex-col gap-16 px-8 py-16 md:gap-24 md:px-4 xl:gap-32 xl:px-8'
 			}
 		>
 			<div className={'flex flex-col gap-16'}>
@@ -101,12 +101,12 @@ function MariageMaeEtRomainComponent() {
 			</div>
 			<div
 				className={
-					'relative grid w-full grid-cols-12 gap-2 px-8 text-center md:gap-8 md:px-16 xl:px-32'
+					'relative grid w-full grid-cols-12 gap-0 px-6 text-center md:gap-8 md:px-16 xl:px-32'
 				}
 			>
 				<div
 					className={
-						'col-span-12 flex w-full flex-col items-center justify-center gap-16 md:col-span-6'
+						'col-span-12 mb-16 flex w-full flex-col items-center justify-center gap-16 md:col-span-6 md:mb-0'
 					}
 				>
 					<Image

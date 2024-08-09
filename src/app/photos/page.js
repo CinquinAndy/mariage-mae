@@ -31,7 +31,7 @@ export default function Page() {
 			/>
 			<div
 				className={
-					'z-20 mx-auto grid h-full w-full grid-cols-12 overflow-visible px-4 md:px-8 xl:mt-0 xl:px-32'
+					'z-20 mx-auto grid h-full w-full grid-cols-12 overflow-visible px-0 md:px-8 xl:mt-0 xl:px-32'
 				}
 			>
 				<div className="z-10 col-span-12 flex transform items-center justify-evenly pt-0 xl:col-span-12">
@@ -79,10 +79,12 @@ export default function Page() {
 							<br />
 							<li>Envoyez vos photos préférées de notre journée spéciale !</li>
 							<br />
+							<hr />
 							<br />
 							<p>
-								vous pouvez nous les envoyés directement via google photos si
-								vous le souhaitez aussi, ici :{' '}
+								Ou alors vous pouvez nous les envoyés directement via google
+								photos si vous le souhaitez aussi, ici : <br />
+								{'-> '}
 								<Link
 									className={'z-50 cursor-pointer text-mae-950 underline'}
 									href={'https://photos.app.goo.gl/qfttVGp1hqpxZhHi7'}

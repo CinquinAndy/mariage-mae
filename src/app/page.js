@@ -35,7 +35,7 @@ export default function Home() {
 				/>
 				<div
 					className={
-						'relative h-[85%] w-[90%] rounded border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
+						'relative h-[85%] w-[80%] rounded border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
