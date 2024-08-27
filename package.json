@@ -24,7 +24,7 @@
     "@hookform/resolvers": "3.9.0",
     "@nextui-org/react": "2.4.6",
     "framer-motion": "11.2.11",
-    "next": "14.2.6",
+    "next": "14.2.7",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-toastify": "10.0.5",
@@ -34,7 +34,7 @@
     "tailwindcss": "3.4.9",
     "@tailwindcss/typography": "0.5.13",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.6",
+    "eslint-config-next": "14.2.7",
     "eslint-config-prettier": "9.1.0",
     "postcss": "8.4.41"
   },
