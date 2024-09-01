@@ -39,7 +39,7 @@
     "postcss": "8.4.42"
   },
   "devDependencies": {
-    "lint-staged": "15.2.9",
+    "lint-staged": "15.2.10",
     "husky": "9.1.5",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.5"
