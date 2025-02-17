@@ -6,6 +6,7 @@ import { Kanit, Updock } from 'next/font/google'
 import { NavComponent } from '@/components/Nav.component'
 import { SignatureComponent } from '@/components/SignatureFooter.component'
 import Script from 'next/script'
+import { FinishedPopup } from '@/app/finishedPopup'
 
 const kanit = Kanit({
 	weight: ['100', '200', '300', '400', '700', '900'],
@@ -36,7 +37,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html className={`${kanit.variable} ${updock.variable}  text-mae-950`}>
+		<html className={`${kanit.variable} ${updock.variable} text-mae-950`}>
 			<Script
 				async
 				src="https://umami.wadefade.fr/script.js"
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
 				data-website-id="1bf392de-37c5-4bbc-b07e-0b18d94906b2"
 			/>
 			<body className={'relative'}>
+				<FinishedPopup></FinishedPopup>
 				<NavComponent />
 				<WrapNextUiProvider>{children}</WrapNextUiProvider>
 				<SignatureComponent />
