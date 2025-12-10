@@ -31,12 +31,12 @@ export function FinishedPopup() {
 							<p>Chers visiteurs,</p>
 							<p>
 								Ce site représente un moment précieux figé dans le temps - le
-								mariage de Mae et Romain qui s'est déroulé le 10 août 2024.
+								mariage de Mae et Romain qui &lsquo;est déroulé le 10 août 2024.
 							</p>
 							<p>
-								Bien que l'événement soit passé, nous gardons ce site en ligne
-								comme un souvenir digital de cette magnifique journée et de tous
-								les préparatifs qui l'ont précédée.
+								Bien que l&apos;événement soit passé, nous gardons ce site en
+								ligne comme un souvenir digital de cette magnifique journée et
+								de tous les préparatifs qui l&apos;ont précédée.
 							</p>
 						</ModalBody>
 						<ModalFooter>
