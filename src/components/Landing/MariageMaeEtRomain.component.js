@@ -115,14 +115,14 @@ function MariageMaeEtRomainComponent() {
 						width={500}
 						height={500}
 						quality={100}
-						className={'h-[350px] rounded object-cover shadow-2xl md:h-auto'}
+						className={'h-[350px] rounded-sm object-cover shadow-2xl md:h-auto'}
 					/>
 					<div className={'flex flex-col items-center justify-center gap-8'}>
 						<div className={'flex flex-col items-center justify-center gap-4'}>
 							<p className={'text-xl font-semibold tracking-wider'}>
 								La mariée
 							</p>
-							<div className={'h-[2px] w-[20px] rounded bg-mae-950/30'} />
+							<div className={'bg-mae-950/30 h-[2px] w-[20px] rounded-sm'} />
 						</div>
 						<h2 className={'text-5xl'}>Cinquin Maeva</h2>
 					</div>
@@ -138,12 +138,12 @@ function MariageMaeEtRomainComponent() {
 						width={500}
 						height={500}
 						quality={100}
-						className={'h-[350px] rounded object-cover shadow-2xl md:h-auto'}
+						className={'h-[350px] rounded-sm object-cover shadow-2xl md:h-auto'}
 					/>
 					<div className={'flex flex-col items-center justify-center gap-8'}>
 						<div className={'flex flex-col items-center justify-center gap-4'}>
 							<p className={'text-xl font-semibold tracking-wider'}>Le marié</p>
-							<div className={'h-[2px] w-[20px] rounded bg-mae-950/30'} />
+							<div className={'bg-mae-950/30 h-[2px] w-[20px] rounded-sm'} />
 						</div>
 						<h2 className={'text-5xl'}>Challande Romain</h2>
 					</div>
@@ -161,7 +161,7 @@ function MariageMaeEtRomainComponent() {
 							height={500}
 							quality={100}
 							className={
-								'h-[400px] rounded object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
+								'h-[400px] rounded-sm object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
 							}
 						/>
 					</div>
@@ -177,7 +177,7 @@ function MariageMaeEtRomainComponent() {
 							height={500}
 							quality={100}
 							className={
-								'h-[250px] rounded object-contain shadow-2xl md:h-[350px] xl:h-[500px]'
+								'h-[250px] rounded-sm object-contain shadow-2xl md:h-[350px] xl:h-[500px]'
 							}
 						/>
 					</div>
@@ -193,7 +193,7 @@ function MariageMaeEtRomainComponent() {
 							height={500}
 							quality={100}
 							className={
-								'h-[400px] rounded object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
+								'h-[400px] rounded-sm object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
 							}
 						/>
 					</div>
@@ -300,7 +300,9 @@ function MariageMaeEtRomainComponent() {
 							width={200}
 							height={200}
 							quality={90}
-							className={'h-[200px] rounded object-cover shadow-2xl md:h-auto'}
+							className={
+								'h-[200px] rounded-sm object-cover shadow-2xl md:h-auto'
+							}
 						/>
 					</div>
 					<div className={'col-span-7 flex flex-col gap-2 text-left'}>

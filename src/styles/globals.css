@@ -1,126 +1,167 @@
-@import "~@flaticon/flaticon-uicons/css/all/all";
+@import '@flaticon/flaticon-uicons/css/all/all';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@heroui/styles';
+
+@source inline('font-kanit font-updock');
+
+@theme {
+	--color-mae-50: #fdf2f8;
+	--color-mae-100: #fce7f2;
+	--color-mae-200: #fad0e7;
+	--color-mae-300: #f7aad1;
+	--color-mae-400: #f175b2;
+	--color-mae-500: #e94b94;
+	--color-mae-600: #d72b71;
+	--color-mae-700: #bb1b59;
+	--color-mae-800: #9a1a4a;
+	--color-mae-900: #811a40;
+	--color-mae-950: #4a0820;
+
+	--font-kanit: var(--font-kanit);
+	--font-updock: var(--font-updock);
+
+	--text-10xl: 10.5rem;
+	--text-11xl: 14rem;
+	--text-12xl: 17.5rem;
+	--text-13xl: 21rem;
+
+	--text-shadow-sm: 0 1px 2px var(--tw-shadow-color);
+	--text-shadow: 0 2px 4px var(--tw-shadow-color);
+	--text-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.25);
+	--text-shadow-lg: 0 8px 16px var(--tw-shadow-color);
+}
+
+@utility text-shadow-sm {
+	text-shadow: var(--text-shadow-sm);
+}
+@utility text-shadow {
+	text-shadow: var(--text-shadow);
+}
+@utility text-shadow-md {
+	text-shadow: var(--text-shadow-md);
+}
+@utility text-shadow-lg {
+	text-shadow: var(--text-shadow-lg);
+}
 
 * {
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    transition: opacity,
-    z-index,
-    color ease-in-out 0.3s;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	transition:
+		opacity,
+		z-index,
+		color ease-in-out 0.3s;
 }
 
 body {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100vw;
-    max-width: 100vw;
-    clear: both;
-    overflow-x: hidden;
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100vw;
+	max-width: 100vw;
+	clear: both;
+	overflow-x: hidden;
 }
 
 html {
-    overflow-x: hidden;
-    max-width: 100vw;
-    scroll-behavior: smooth;
+	overflow-x: hidden;
+	max-width: 100vw;
+	scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 768px) {
-    ::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 7px;
-        height: 4px;
-    }
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 7px;
+		height: 4px;
+	}
 }
 
 @media screen and (min-width: 768px) {
-    ::-webkit-scrollbar-thumb {
-        border-radius: 2rem;
-        background-color: #19191e4d;
-        -webkit-box-shadow: 0 0 1px hsl(0deg 0% 100% / 50%);
-    }
+	::-webkit-scrollbar-thumb {
+		border-radius: 2rem;
+		background-color: #19191e4d;
+		-webkit-box-shadow: 0 0 1px hsl(0deg 0% 100% / 50%);
+	}
 }
 
-/* custom property group for tailwind */
 @layer base {
-    * {
-        @apply font-kanit;
-    }
+	* {
+		@apply font-kanit;
+	}
 
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-updock;
-        color: #4a0820;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-updock;
+		color: #4a0820;
+	}
 
-    h1 {
-        @apply text-sm font-semibold sm:text-2xl;
-    }
+	h1 {
+		@apply text-sm font-semibold sm:text-2xl;
+	}
 
-    h2 {
-        @apply text-xs font-light sm:text-xl;
-    }
+	h2 {
+		@apply text-xs font-light sm:text-xl;
+	}
 
-    h3 {
-        @apply sm:text-lg;
-    }
+	h3 {
+		@apply sm:text-lg;
+	}
 
-    h4 {
-        @apply text-base;
-    }
+	h4 {
+		@apply text-base;
+	}
 }
 
 @layer components {
-    /* exemple of component css */
-    .icon {
-        @apply flex h-[20px] w-[20px] items-center justify-center text-white transition-all;
-    }
+	.icon {
+		@apply flex h-[20px] w-[20px] items-center justify-center text-white transition-all;
+	}
 }
 
-.special-title{
-    font-size: 7.7rem;
-    line-height: 40rem;
+.special-title {
+	font-size: 7.7rem;
+	line-height: 40rem;
 }
 
-/* for tablet */
 @media screen and (min-width: 768px) {
-    .special-title{
-        font-size: 12rem;
-        line-height: 40rem;
-    }
+	.special-title {
+		font-size: 12rem;
+		line-height: 40rem;
+	}
 }
 
-/* for desktop */
 @media screen and (min-width: 1024px) {
-    .special-title{
-        font-size: 30rem;
-        line-height: 40rem;
-    }
+	.special-title {
+		font-size: 30rem;
+		line-height: 40rem;
+	}
 }
 
-/* blup blup trigger animation */
-.animate-custom-blup-blup{
-    animation: blup-blup 1s ease-in-out infinite;
+.animate-custom-blup-blup {
+	animation: blup-blup 1s ease-in-out infinite;
 }
 
 @keyframes blup-blup {
-    0% {
-        transform: scale(100%);
-    }
-    50% {
-        transform: scale(105%);
-    }
-    100% {
-        transform: scale(100%);
-    }
+	0% {
+		transform: scale(100%);
+	}
+	50% {
+		transform: scale(105%);
+	}
+	100% {
+		transform: scale(100%);
+	}
 }
 
-/* custom title gradient color to right, grey hard to grey light */
-.custom-title-color-gradient{
-    background: #030712;
-    background: linear-gradient(to right, #030712 0%, #e5e7eb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.custom-title-color-gradient {
+	background: #030712;
+	background: linear-gradient(to right, #030712 0%, #e5e7eb 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

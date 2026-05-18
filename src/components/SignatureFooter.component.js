@@ -6,7 +6,7 @@ export function SignatureComponent() {
 	return (
 		<div
 			className={
-				'mx-auto flex w-full  max-w-xl flex-col px-4 py-20 md:px-6 xl:max-w-3xl xl:px-8'
+				'mx-auto flex w-full max-w-xl flex-col px-4 py-20 md:px-6 xl:max-w-3xl xl:px-8'
 			}
 		>
 			<div className={'flex w-full items-center justify-center'}>

@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 
-import WrapNextUiProvider from '@/providers/WrapNextUiProvider'
 import { Kanit, Updock } from 'next/font/google'
 import { NavComponent } from '@/components/Nav.component'
 import { SignatureComponent } from '@/components/SignatureFooter.component'
@@ -30,7 +29,7 @@ export const metadata = {
 	alternates: {
 		canonical: '/',
 		languages: {
-			'fr-FR': 'wedding.cinquin-maeva.com',
+			'fr-FR': '/',
 		},
 	},
 }
@@ -47,7 +46,7 @@ export default function RootLayout({ children }) {
 			<body className={'relative'}>
 				<FinishedPopup></FinishedPopup>
 				<NavComponent />
-				<WrapNextUiProvider>{children}</WrapNextUiProvider>
+				{children}
 				<SignatureComponent />
 			</body>
 		</html>

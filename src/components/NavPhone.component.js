@@ -40,7 +40,7 @@ export function NavPhoneComponent({ navLinks }) {
 				>
 					<div
 						className={
-							'flex h-full w-full items-center justify-between px-4 text-sm uppercase tracking-widest text-mae-950 no-underline'
+							'text-mae-950 flex h-full w-full items-center justify-between px-4 text-sm tracking-widest uppercase no-underline'
 						}
 					>
 						<Link href={'/'}>
@@ -52,17 +52,17 @@ export function NavPhoneComponent({ navLinks }) {
 						<div className="flex items-center">
 							<Link
 								href={'/photos'}
-								className="relative mr-6 flex h-9 w-9 items-center justify-center rounded-full bg-mae-950"
+								className="bg-mae-950 relative mr-6 flex h-9 w-9 items-center justify-center rounded-full"
 							>
 								<i className="fi fi-rr-camera translate-y-[2px] transform text-sm text-white"></i>
 							</Link>
 							<button
-								className={'relative focus:outline-none'}
+								className={'relative focus:outline-hidden'}
 								onClick={() => setIsMenuOpen(!isMenuOpen)}
 							>
 								<i className="fi fi-br-menu-burger text-xl"></i>
 								{countUnvisitedPages() !== 0 && (
-									<span className="animate-custom-blup-blup absolute -right-3.5 -top-3 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-center text-xs text-white">
+									<span className="animate-custom-blup-blup absolute -top-3 -right-3.5 flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-center text-xs text-white">
 										{countUnvisitedPages()}
 									</span>
 								)}
@@ -81,7 +81,7 @@ export function NavPhoneComponent({ navLinks }) {
 				<div className="relative flex h-full w-full flex-col items-center justify-start gap-16 pt-32">
 					<div>
 						<button
-							className="absolute right-0 top-0 p-8 text-mae-950 focus:outline-none"
+							className="text-mae-950 absolute top-0 right-0 p-8 focus:outline-hidden"
 							onClick={() => setIsMenuOpen(!isMenuOpen)}
 						>
 							<i className="fi fi-br-cross text-xl"></i>
@@ -103,7 +103,7 @@ export function NavPhoneComponent({ navLinks }) {
 								<>
 									{label}
 									{visitedPages[href] !== true && isNotifActive && (
-										<span className="animate-custom-blup-blup absolute -right-2.5 -top-0 h-1.5 w-1.5 rounded-full bg-red-700"></span>
+										<span className="animate-custom-blup-blup absolute -top-0 -right-2.5 h-1.5 w-1.5 rounded-full bg-red-700"></span>
 									)}
 								</>
 							)}

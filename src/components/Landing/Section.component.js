@@ -26,7 +26,7 @@ export function SectionComponent({
 					width={500}
 					height={350}
 					quality={80}
-					className={'rounded shadow-2xl'}
+					className={'rounded-sm shadow-2xl'}
 				/>
 			</div>
 			<div
@@ -37,7 +37,7 @@ export function SectionComponent({
 				}`}
 			>
 				<p className={'text-xl font-semibold tracking-wider'}>{title}</p>
-				<div className={'h-[2px] w-[20px] rounded bg-mae-950/80'} />
+				<div className={'bg-mae-950/80 h-[2px] w-[20px] rounded-sm'} />
 				{text}
 			</div>
 		</div>

@@ -1,33 +1,20 @@
 'use client'
 
-import {
-	Modal,
-	ModalContent,
-	ModalHeader,
-	ModalBody,
-	ModalFooter,
-	Button,
-	useDisclosure,
-} from '@nextui-org/react'
+import { useState } from 'react'
+import { Modal, Button } from '@heroui/react'
 
 export function FinishedPopup() {
-	const { isOpen, onOpen, onOpenChange } = useDisclosure({ defaultOpen: true })
+	const [isOpen, setIsOpen] = useState(true)
 
 	return (
-		<Modal
-			backdrop="blur"
-			isOpen={isOpen}
-			onOpenChange={onOpenChange}
-			placement="center"
-			size="lg"
-		>
-			<ModalContent>
-				{onClose => (
-					<>
-						<ModalHeader className="flex flex-col gap-1 font-updock text-4xl text-mae-950">
-							Un moment dans le temps...
-						</ModalHeader>
-						<ModalBody>
+		<Modal isOpen={isOpen} onOpenChange={setIsOpen}>
+			<Modal.Backdrop variant="blur">
+				<Modal.Container placement="center" size="lg">
+					<Modal.Dialog>
+						<Modal.Header className="font-updock text-mae-950 flex flex-col gap-1 text-4xl">
+							<Modal.Heading>Un moment dans le temps...</Modal.Heading>
+						</Modal.Header>
+						<Modal.Body>
 							<p>Chers visiteurs,</p>
 							<p>
 								Ce site représente un moment précieux figé dans le temps - le
@@ -38,15 +25,15 @@ export function FinishedPopup() {
 								ligne comme un souvenir digital de cette magnifique journée et
 								de tous les préparatifs qui l&apos;ont précédée.
 							</p>
-						</ModalBody>
-						<ModalFooter>
-							<Button color="primary" onPress={onClose} className="font-kanit">
+						</Modal.Body>
+						<Modal.Footer>
+							<Button color="primary" slot="close" className="font-kanit">
 								Je comprends
 							</Button>
-						</ModalFooter>
-					</>
-				)}
-			</ModalContent>
+						</Modal.Footer>
+					</Modal.Dialog>
+				</Modal.Container>
+			</Modal.Backdrop>
 		</Modal>
 	)
 }

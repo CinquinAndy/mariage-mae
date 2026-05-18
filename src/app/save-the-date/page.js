@@ -63,7 +63,7 @@ export default function Page() {
 							/>
 							<h2
 								className={
-									' absolute -right-8 bottom-8 z-10 text-10xl text-white mix-blend-exclusion shadow-black text-shadow-md'
+									'text-10xl absolute -right-8 bottom-8 z-10 text-white mix-blend-exclusion shadow-black text-shadow-md'
 								}
 							>
 								01.
@@ -75,13 +75,13 @@ export default function Page() {
 							>
 								<div
 									className={
-										'h-[50px] w-[1px] rounded bg-gradient-to-b from-gray-300 to-gray-50'
+										'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'
 									}
 								/>
 								<div className={'flex'}>
 									<div
 										className={
-											'z-30 flex w-full flex-col items-center justify-center gap-2 '
+											'z-30 flex w-full flex-col items-center justify-center gap-2'
 										}
 									>
 										<p className={''}>10 Février 2019</p>
@@ -105,7 +105,7 @@ export default function Page() {
 							/>
 							<h2
 								className={
-									'absolute -right-8 bottom-8 z-10 text-10xl text-white mix-blend-exclusion shadow-black text-shadow-md'
+									'text-10xl absolute -right-8 bottom-8 z-10 text-white mix-blend-exclusion shadow-black text-shadow-md'
 								}
 							>
 								02.
@@ -117,13 +117,13 @@ export default function Page() {
 							>
 								<div
 									className={
-										'h-[50px] w-[1px] rounded bg-gradient-to-b from-gray-300 to-gray-50'
+										'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'
 									}
 								/>
 								<div className={'flex'}>
 									<div
 										className={
-											'z-30 flex w-full flex-col items-center justify-center gap-2 '
+											'z-30 flex w-full flex-col items-center justify-center gap-2'
 										}
 									>
 										<p className={''}>10 Février 2022</p>
@@ -147,7 +147,7 @@ export default function Page() {
 							/>
 							<h2
 								className={
-									'absolute -right-8 bottom-8 z-10 text-10xl text-white mix-blend-exclusion shadow-black text-shadow-md'
+									'text-10xl absolute -right-8 bottom-8 z-10 text-white mix-blend-exclusion shadow-black text-shadow-md'
 								}
 							>
 								03.
@@ -159,13 +159,13 @@ export default function Page() {
 							>
 								<div
 									className={
-										'h-[50px] w-[1px] rounded bg-gradient-to-b from-gray-300 to-gray-50'
+										'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'
 									}
 								/>
 								<div className={'flex'}>
 									<div
 										className={
-											'z-30 flex w-full flex-col items-center justify-center gap-2 '
+											'z-30 flex w-full flex-col items-center justify-center gap-2'
 										}
 									>
 										<p className={''}>10 août 2024</p>
@@ -180,7 +180,7 @@ export default function Page() {
 			<div className={'h-[100px] w-full'}></div>
 			<div
 				className={
-					'relative flex h-screen w-screen flex-col items-center justify-center '
+					'relative flex h-screen w-screen flex-col items-center justify-center'
 				}
 			>
 				<Link
@@ -212,7 +212,7 @@ export default function Page() {
 									</h2>
 									<div
 										className={
-											'absolute -right-[25px] -top-[15px] flex items-center justify-center'
+											'absolute -top-[15px] -right-[25px] flex items-center justify-center'
 										}
 									>
 										<CustomSvgComponent
@@ -222,7 +222,7 @@ export default function Page() {
 									</div>
 									<div
 										className={
-											'absolute -left-[25px] -top-[15px] flex items-center justify-center'
+											'absolute -top-[15px] -left-[25px] flex items-center justify-center'
 										}
 									>
 										<CustomSvgComponent

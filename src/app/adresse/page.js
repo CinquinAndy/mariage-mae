@@ -34,13 +34,13 @@ export default function Page() {
 				/>
 				<div
 					className={
-						'relative h-[85%] w-[90%] rounded border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
+						'relative h-[85%] w-[90%] rounded-sm border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
 						<div
 							className={
-								'relative flex h-full w-full items-center justify-center rounded bg-black/10'
+								'relative flex h-full w-full items-center justify-center rounded-sm bg-black/10'
 							}
 						>
 							<h1

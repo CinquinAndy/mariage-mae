@@ -35,13 +35,13 @@ export default function Home() {
 				/>
 				<div
 					className={
-						'relative h-[85%] w-[80%] rounded border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
+						'relative h-[85%] w-[80%] rounded-sm border border-gray-100 shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
 						<div
 							className={
-								'relative flex h-full w-full items-center justify-center rounded bg-black/10'
+								'relative flex h-full w-full items-center justify-center rounded-sm bg-black/10'
 							}
 						>
 							<h1
@@ -66,7 +66,7 @@ export default function Home() {
 									</h2>
 									<div
 										className={
-											'absolute -right-[25px] -top-[15px] flex items-center justify-center'
+											'absolute -top-[15px] -right-[25px] flex items-center justify-center'
 										}
 									>
 										<CustomSvgComponent
@@ -76,7 +76,7 @@ export default function Home() {
 									</div>
 									<div
 										className={
-											'absolute -left-[25px] -top-[15px] flex items-center justify-center'
+											'absolute -top-[15px] -left-[25px] flex items-center justify-center'
 										}
 									>
 										<CustomSvgComponent

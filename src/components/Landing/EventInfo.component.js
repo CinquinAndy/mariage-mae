@@ -15,7 +15,7 @@ export function EventInfoComponent({
 						src={imageSrc}
 						alt={imageAlt}
 						quality={90}
-						className="rounded object-cover shadow-lg"
+						className="rounded-sm object-cover shadow-lg"
 						width={500}
 						height={100}
 					/>

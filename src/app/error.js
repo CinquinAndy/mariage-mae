@@ -9,7 +9,7 @@ export default function Error() {
 				<main className="relative isolate z-30 min-h-screen">
 					{/* darken */}
 					<div
-						className={'absolute left-0 top-0 -z-10 h-full w-full bg-black'}
+						className={'absolute top-0 left-0 -z-10 h-full w-full bg-black'}
 					/>
 					<Image
 						src="/error_background.png"
@@ -20,7 +20,7 @@ export default function Error() {
 						className="absolute inset-0 -z-10 h-full w-full object-cover object-left opacity-50"
 					/>
 					<div className="z-30 mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8">
-						<p className="text-base font-semibold italic leading-8 text-white">
+						<p className="text-base leading-8 font-semibold text-white italic">
 							Oups !
 						</p>
 						<h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
@@ -34,7 +34,7 @@ export default function Error() {
 						</p>
 						<div className="mt-10 flex justify-center">
 							<button
-								className="text-sm font-semibold leading-7 text-white"
+								className="text-sm leading-7 font-semibold text-white"
 								onClick={
 									// Attempt to go back in history first
 									() => {
