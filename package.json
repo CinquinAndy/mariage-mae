@@ -33,7 +33,7 @@
 		"react-toastify": "11.1.0",
 		"sharp": "0.34.5",
 		"tailwindcss": "4.3.0",
-		"zustand": "5.0.13"
+		"zustand": "5.0.14"
 	},
 	"devDependencies": {
 		"husky": "9.1.7",
