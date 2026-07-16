@@ -21,7 +21,7 @@
 		"@headlessui/react": "2.2.10",
 		"@heroui/react": "3.2.2",
 		"@heroui/styles": "3.2.2",
-		"@tailwindcss/postcss": "4.3.2",
+		"@tailwindcss/postcss": "4.3.3",
 		"@tailwindcss/typography": "0.5.19",
 		"eslint": "9.39.5",
 		"eslint-config-next": "16.2.10",
@@ -32,7 +32,7 @@
 		"react-dom": "19.2.7",
 		"react-toastify": "11.1.0",
 		"sharp": "0.34.5",
-		"tailwindcss": "4.3.2",
+		"tailwindcss": "4.3.3",
 		"zustand": "5.0.14"
 	},
 	"devDependencies": {
