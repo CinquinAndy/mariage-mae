@@ -28,7 +28,7 @@
 		"eslint-config-prettier": "10.1.8",
 		"next": "16.2.10",
 		"postcss": "8.5.21",
-		"react": "19.2.7",
+		"react": "19.2.8",
 		"react-dom": "19.2.7",
 		"react-toastify": "11.1.0",
 		"sharp": "0.34.5",
