@@ -22,7 +22,7 @@
 		"@heroui/react": "3.2.2",
 		"@heroui/styles": "3.2.2",
 		"@tailwindcss/postcss": "4.3.3",
-		"@tailwindcss/typography": "0.5.19",
+		"@tailwindcss/typography": "0.5.20",
 		"eslint": "9.39.5",
 		"eslint-config-next": "16.2.11",
 		"eslint-config-prettier": "10.1.8",
