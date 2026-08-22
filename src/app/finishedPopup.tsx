@@ -1,7 +1,7 @@
 'use client'
 
+import { Button, Modal } from '@heroui/react'
 import { useState } from 'react'
-import { Modal, Button } from '@heroui/react'
 
 export function FinishedPopup() {
 	const [isOpen, setIsOpen] = useState(true)
@@ -17,17 +17,16 @@ export function FinishedPopup() {
 						<Modal.Body>
 							<p>Chers visiteurs,</p>
 							<p>
-								Ce site représente un moment précieux figé dans le temps - le
-								mariage de Mae et Romain qui &lsquo;est déroulé le 10 août 2024.
+								Ce site représente un moment précieux figé dans le temps - le mariage de Mae et Romain qui &lsquo;est
+								déroulé le 10 août 2024.
 							</p>
 							<p>
-								Bien que l&apos;événement soit passé, nous gardons ce site en
-								ligne comme un souvenir digital de cette magnifique journée et
-								de tous les préparatifs qui l&apos;ont précédée.
+								Bien que l&apos;événement soit passé, nous gardons ce site en ligne comme un souvenir digital de cette
+								magnifique journée et de tous les préparatifs qui l&apos;ont précédée.
 							</p>
 						</Modal.Body>
 						<Modal.Footer>
-							<Button color="primary" slot="close" className="font-kanit">
+							<Button variant="primary" slot="close" className="font-kanit">
 								Je comprends
 							</Button>
 						</Modal.Footer>

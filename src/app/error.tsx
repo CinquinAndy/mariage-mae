@@ -2,15 +2,13 @@
 
 import Image from 'next/image'
 
-export default function Error() {
+export default function ErrorPage() {
 	return (
-		<html className={'overflow-hidden'}>
+		<html lang="fr" className={'overflow-hidden'}>
 			<body>
 				<main className="relative isolate z-30 min-h-screen">
 					{/* darken */}
-					<div
-						className={'absolute top-0 left-0 -z-10 h-full w-full bg-black'}
-					/>
+					<div className={'absolute top-0 left-0 -z-10 h-full w-full bg-black'} />
 					<Image
 						src="/error_background.png"
 						alt="error"
@@ -20,20 +18,15 @@ export default function Error() {
 						className="absolute inset-0 -z-10 h-full w-full object-cover object-left opacity-50"
 					/>
 					<div className="z-30 mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8">
-						<p className="text-base leading-8 font-semibold text-white italic">
-							Oups !
-						</p>
-						<h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-							Une erreur est survenue
-						</h1>
+						<p className="text-base leading-8 font-semibold text-white italic">Oups !</p>
+						<h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">Une erreur est survenue</h1>
 						<p className="mt-4 text-base text-white shadow-lg sm:mt-6">
 							Désolé, une erreur est survenue. Veuillez réessayer.
 						</p>
-						<p className={'text-white shadow-lg'}>
-							Ou contactez-nous si le problème persiste.
-						</p>
+						<p className={'text-white shadow-lg'}>Ou contactez-nous si le problème persiste.</p>
 						<div className="mt-10 flex justify-center">
 							<button
+								type="button"
 								className="text-sm leading-7 font-semibold text-white"
 								onClick={
 									// Attempt to go back in history first

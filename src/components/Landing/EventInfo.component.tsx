@@ -1,19 +1,21 @@
 import Image from 'next/image'
 
-export function EventInfoComponent({
-	title,
-	time,
-	address,
-	imageSrc,
-	imageAlt,
-}) {
+type EventInfoProps = {
+	title: string
+	time?: string
+	address?: string
+	imageSrc?: string
+	imageAlt?: string
+}
+
+export function EventInfoComponent({ title, time, address, imageSrc, imageAlt }: EventInfoProps) {
 	return (
 		<div className="relative col-span-2 flex flex-col items-start justify-start gap-2 text-start">
 			{imageSrc && (
 				<div className="w-full">
 					<Image
 						src={imageSrc}
-						alt={imageAlt}
+						alt={imageAlt ?? ''}
 						quality={90}
 						className="rounded-sm object-cover shadow-lg"
 						width={500}

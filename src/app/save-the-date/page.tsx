@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { CustomSvgComponent } from '@/components/CustomSvg.component'
 import Link from 'next/link'
+import { CustomSvgComponent } from '@/components/CustomSvg.component'
 
 export default function Page() {
 	return (
@@ -31,16 +31,8 @@ export default function Page() {
 					alt={'will u marry me'}
 					quality={90}
 				/>
-				<div
-					className={
-						'mx-auto grid h-full w-full grid-cols-12 px-4 sm:py-16 md:px-8 xl:px-32'
-					}
-				>
-					<div
-						className={
-							'col-span-12 flex h-full items-center justify-start xl:col-span-4'
-						}
-					>
+				<div className={'mx-auto grid h-full w-full grid-cols-12 px-4 sm:py-16 md:px-8 xl:px-32'}>
+					<div className={'col-span-12 flex h-full items-center justify-start xl:col-span-4'}>
 						<h1
 							className={
 								'custom-title-color-gradient px-4 text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] xl:text-[15rem] xl:leading-[15rem]'
@@ -73,21 +65,11 @@ export default function Page() {
 									'absolute -bottom-[180px] left-0 flex w-full flex-col items-center justify-center md:-bottom-[150px]'
 								}
 							>
-								<div
-									className={
-										'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'
-									}
-								/>
+								<div className={'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'} />
 								<div className={'flex'}>
-									<div
-										className={
-											'z-30 flex w-full flex-col items-center justify-center gap-2'
-										}
-									>
+									<div className={'z-30 flex w-full flex-col items-center justify-center gap-2'}>
 										<p className={''}>10 Février 2019</p>
-										<h2
-											className={'text-center text-3xl'}
-										>{`On s'est mis ensemble`}</h2>
+										<h2 className={'text-center text-3xl'}>{`On s'est mis ensemble`}</h2>
 									</div>
 								</div>
 							</section>
@@ -115,21 +97,11 @@ export default function Page() {
 									'absolute -bottom-[180px] left-0 flex w-full flex-col items-center justify-center md:-bottom-[150px]'
 								}
 							>
-								<div
-									className={
-										'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'
-									}
-								/>
+								<div className={'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'} />
 								<div className={'flex'}>
-									<div
-										className={
-											'z-30 flex w-full flex-col items-center justify-center gap-2'
-										}
-									>
+									<div className={'z-30 flex w-full flex-col items-center justify-center gap-2'}>
 										<p className={''}>10 Février 2022</p>
-										<h2 className={'text-center text-3xl'}>
-											Demande en mariage
-										</h2>
+										<h2 className={'text-center text-3xl'}>Demande en mariage</h2>
 									</div>
 								</div>
 							</section>
@@ -157,17 +129,9 @@ export default function Page() {
 									'absolute -bottom-[180px] left-0 flex w-full flex-col items-center justify-center md:-bottom-[150px]'
 								}
 							>
-								<div
-									className={
-										'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'
-									}
-								/>
+								<div className={'h-[50px] w-[1px] rounded-sm bg-gradient-to-b from-gray-300 to-gray-50'} />
 								<div className={'flex'}>
-									<div
-										className={
-											'z-30 flex w-full flex-col items-center justify-center gap-2'
-										}
-									>
+									<div className={'z-30 flex w-full flex-col items-center justify-center gap-2'}>
 										<p className={''}>10 août 2024</p>
 										<h2 className={'text-center text-3xl'}>Jour du mariage</h2>
 									</div>
@@ -178,57 +142,26 @@ export default function Page() {
 				</div>
 			</div>
 			<div className={'h-[100px] w-full'}></div>
-			<div
-				className={
-					'relative flex h-screen w-screen flex-col items-center justify-center'
-				}
-			>
+			<div className={'relative flex h-screen w-screen flex-col items-center justify-center'}>
 				<Link
-					href={
-						'https://docs.google.com/forms/d/e/1FAIpQLSerci9E0oDa1WfY7s6GyEM857JgdzlC7jFhuSqOwoFYPcTdBA/viewform'
-					}
+					href={'https://docs.google.com/forms/d/e/1FAIpQLSerci9E0oDa1WfY7s6GyEM857JgdzlC7jFhuSqOwoFYPcTdBA/viewform'}
 					className={
 						'group relative h-[85%] w-[90%] rounded-xl border border-gray-100 shadow-2xl transition-all hover:scale-105 hover:cursor-pointer hover:border-2 hover:border-gray-200 hover:shadow-2xl md:h-[70%] md:w-[70%] xl:h-[65%]'
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
-						<div
-							className={
-								'relative flex h-full w-full items-center justify-center rounded-xl bg-black/10'
-							}
-						>
-							<div
-								className={
-									'absolute bottom-32 left-1/2 -translate-x-1/2 transform px-4 py-2 md:bottom-8'
-								}
-							>
+						<div className={'relative flex h-full w-full items-center justify-center rounded-xl bg-black/10'}>
+							<div className={'absolute bottom-32 left-1/2 -translate-x-1/2 transform px-4 py-2 md:bottom-8'}>
 								<div className={'relative h-full w-full'}>
-									<h2
-										className={
-											'text-center text-4xl text-white underline shadow-black text-shadow-lg'
-										}
-									>
+									<h2 className={'text-center text-4xl text-white underline shadow-black text-shadow-lg'}>
 										je viens →
 									</h2>
-									<div
-										className={
-											'absolute -top-[15px] -right-[25px] flex items-center justify-center'
-										}
-									>
-										<CustomSvgComponent
-											classNames={'w-[25px] h-[25px] bg-white/75'}
-											url={'/party-horn.svg'}
-										/>
+									<div className={'absolute -top-[15px] -right-[25px] flex items-center justify-center'}>
+										<CustomSvgComponent classNames={'w-[25px] h-[25px] bg-white/75'} url={'/party-horn.svg'} />
 									</div>
-									<div
-										className={
-											'absolute -top-[15px] -left-[25px] flex items-center justify-center'
-										}
-									>
+									<div className={'absolute -top-[15px] -left-[25px] flex items-center justify-center'}>
 										<CustomSvgComponent
-											classNames={
-												'w-[25px] h-[25px] bg-white/75 transform scale-x-[-1]'
-											}
+											classNames={'w-[25px] h-[25px] bg-white/75 transform scale-x-[-1]'}
 											url={'/party-horn.svg'}
 										/>
 									</div>
@@ -241,9 +174,7 @@ export default function Page() {
 						alt={'Wedding roses'}
 						fill={true}
 						quality={100}
-						className={
-							'-z-10 rounded-xl object-cover grayscale transition-all group-hover:grayscale-0'
-						}
+						className={'-z-10 rounded-xl object-cover grayscale transition-all group-hover:grayscale-0'}
 					/>
 				</Link>
 			</div>

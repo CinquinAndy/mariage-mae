@@ -7,11 +7,7 @@ export default function Home() {
 	return (
 		<>
 			{/*<ModalImportantComponent />*/}
-			<div
-				className={
-					'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'
-				}
-			>
+			<div className={'relative -z-10 flex h-screen w-screen flex-col items-center justify-center'}>
 				<Image
 					src={'/willumarryme.jpg'}
 					fill={true}
@@ -39,50 +35,19 @@ export default function Home() {
 					}
 				>
 					<div className={'absolute h-full w-full p-3'}>
-						<div
-							className={
-								'relative flex h-full w-full items-center justify-center rounded-sm bg-black/10'
-							}
-						>
-							<h1
-								className={
-									'text-center text-5xl text-white shadow-black text-shadow-lg lg:text-7xl xl:text-9xl'
-								}
-							>
+						<div className={'relative flex h-full w-full items-center justify-center rounded-sm bg-black/10'}>
+							<h1 className={'text-center text-5xl text-white shadow-black text-shadow-lg lg:text-7xl xl:text-9xl'}>
 								Maeva & Romain
 							</h1>
-							<div
-								className={
-									'absolute bottom-32 left-1/2 -translate-x-1/2 transform px-4 py-2 md:bottom-8'
-								}
-							>
+							<div className={'absolute bottom-32 left-1/2 -translate-x-1/2 transform px-4 py-2 md:bottom-8'}>
 								<div className={'relative h-full w-full'}>
-									<h2
-										className={
-											'text-center text-4xl text-white shadow-black text-shadow-lg'
-										}
-									>
-										10 août 2024
-									</h2>
-									<div
-										className={
-											'absolute -top-[15px] -right-[25px] flex items-center justify-center'
-										}
-									>
-										<CustomSvgComponent
-											classNames={'w-[25px] h-[25px] bg-white/75'}
-											url={'/party-horn.svg'}
-										/>
+									<h2 className={'text-center text-4xl text-white shadow-black text-shadow-lg'}>10 août 2024</h2>
+									<div className={'absolute -top-[15px] -right-[25px] flex items-center justify-center'}>
+										<CustomSvgComponent classNames={'w-[25px] h-[25px] bg-white/75'} url={'/party-horn.svg'} />
 									</div>
-									<div
-										className={
-											'absolute -top-[15px] -left-[25px] flex items-center justify-center'
-										}
-									>
+									<div className={'absolute -top-[15px] -left-[25px] flex items-center justify-center'}>
 										<CustomSvgComponent
-											classNames={
-												'w-[25px] h-[25px] bg-white/75 transform scale-x-[-1]'
-											}
+											classNames={'w-[25px] h-[25px] bg-white/75 transform scale-x-[-1]'}
 											url={'/party-horn.svg'}
 										/>
 									</div>
@@ -90,12 +55,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-					<Image
-						src={'/background.jpg'}
-						alt={'Wedding'}
-						fill={true}
-						className={'-z-10 object-cover grayscale'}
-					/>
+					<Image src={'/background.jpg'} alt={'Wedding'} fill={true} className={'-z-10 object-cover grayscale'} />
 				</div>
 			</div>
 			<MariageMaeEtRomainComponent />

@@ -12,8 +12,8 @@ That is the list of technologies that ForHives use.
 > > - [TailwindCSS](https://tailwindcss.com/)
 > > - [TailwindUI](https://tailwindui.com/)
 > > - [HeadlessUI](https://headlessui.com/)
-> > - [Prettier](https://prettier.io/)
-> > - [EsLint](https://eslint.org/)
+> > - [TypeScript](https://www.typescriptlang.org/)
+> > - [Biome](https://biomejs.dev/) (lint + format)
 > > - [Husky](https://typicode.github.io/husky/#/)
 
 > **CI/CD**

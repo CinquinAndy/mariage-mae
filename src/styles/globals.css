@@ -1,9 +1,9 @@
-@import '@flaticon/flaticon-uicons/css/all/all';
+@import "@flaticon/flaticon-uicons/css/all/all";
 
-@import 'tailwindcss';
-@import '@heroui/styles';
+@import "tailwindcss";
+@import "@heroui/styles";
 
-@source inline('font-kanit font-updock');
+@source inline("font-kanit font-updock");
 
 @theme {
 	--color-mae-50: #fdf2f8;
@@ -160,7 +160,6 @@ html {
 }
 
 .custom-title-color-gradient {
-	background: #030712;
 	background: linear-gradient(to right, #030712 0%, #e5e7eb 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;

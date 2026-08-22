@@ -2,11 +2,12 @@ import '@/styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 
 import { Kanit, Updock } from 'next/font/google'
-import { NavComponent } from '@/components/Nav.component'
-import { SignatureComponent } from '@/components/SignatureFooter.component'
 import Script from 'next/script'
+import type { ReactNode } from 'react'
 import { FinishedPopup } from '@/app/finishedPopup'
 import { HiddenOnPagesComponent } from '@/components/HiddenOnPages.component'
+import { NavComponent } from '@/components/Nav.component'
+import { SignatureComponent } from '@/components/SignatureFooter.component'
 
 // Pages nues : ni modale, ni nav, ni footer
 const barePages = ['/surprise']
@@ -27,8 +28,7 @@ const updock = Updock({
 
 export const metadata = {
 	title: 'Le mariage de Maeva et Romain',
-	description:
-		'Le plus beau jour de notre vie, notre mariage, toutes les infos ici !',
+	description: 'Le plus beau jour de notre vie, notre mariage, toutes les infos ici !',
 	metadataBase: new URL('https://wedding.cinquin-maeva.com'),
 	alternates: {
 		canonical: '/',
@@ -38,9 +38,9 @@ export const metadata = {
 	},
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html className={`${kanit.variable} ${updock.variable} text-mae-950`}>
+		<html lang="fr" className={`${kanit.variable} ${updock.variable} text-mae-950`}>
 			<Script
 				async
 				src="https://umami.wadefade.fr/script.js"

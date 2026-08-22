@@ -1,10 +1,17 @@
+export type SurpriseStatus = 'loading' | 'playing' | 'reveal' | 'revealed' | 'error' | 'blocked'
+
+type SurpriseLoaderProps = {
+	status: SurpriseStatus
+	progress: number
+	onStart: () => void
+}
+
 /**
  * Écran de chargement de la page surprise, affiché avant toute chose.
  * Purement visuel : l'état vient de SurpriseExperienceComponent.
  */
-export function SurpriseLoaderComponent({ status, progress, onStart }) {
-	const isHidden =
-		status === 'playing' || status === 'reveal' || status === 'revealed'
+export function SurpriseLoaderComponent({ status, progress, onStart }: SurpriseLoaderProps) {
+	const isHidden = status === 'playing' || status === 'reveal' || status === 'revealed'
 	const percent = Math.round(progress * 100)
 
 	return (
@@ -14,19 +21,13 @@ export function SurpriseLoaderComponent({ status, progress, onStart }) {
 				isHidden ? 'pointer-events-none opacity-0' : 'opacity-100'
 			}`}
 		>
-			{status === 'error' && (
-				<p className={'text-center text-sm tracking-widest uppercase'}>
-					Le chargement a échoué
-				</p>
-			)}
+			{status === 'error' && <p className={'text-center text-sm tracking-widest uppercase'}>Le chargement a échoué</p>}
 
 			{status === 'blocked' && (
 				<button
 					type={'button'}
 					onClick={onStart}
-					className={
-						'font-updock cursor-pointer text-5xl text-white transition-transform hover:scale-105'
-					}
+					className={'font-updock cursor-pointer text-5xl text-white transition-transform hover:scale-105'}
 				>
 					Lancer
 				</button>
@@ -42,10 +43,7 @@ export function SurpriseLoaderComponent({ status, progress, onStart }) {
 						aria-valuenow={percent}
 						className={'h-px w-48 overflow-hidden bg-white/20'}
 					>
-						<div
-							className={'h-full bg-white transition-[width] duration-300'}
-							style={{ width: `${percent}%` }}
-						/>
+						<div className={'h-full bg-white transition-[width] duration-300'} style={{ width: `${percent}%` }} />
 					</div>
 				</>
 			)}

@@ -1,4 +1,9 @@
-export function CustomSvgComponent({ url, classNames }) {
+type CustomSvgProps = {
+	url: string
+	classNames?: string
+}
+
+export function CustomSvgComponent({ url, classNames = '' }: CustomSvgProps) {
 	return (
 		<div
 			className={`h-[20px] w-[20px] ${classNames}`}

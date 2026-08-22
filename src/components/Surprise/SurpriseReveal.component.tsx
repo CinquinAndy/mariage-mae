@@ -1,15 +1,34 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import {
-	FRAGMENT_SHADER,
-	VERTEX_SHADER,
-} from '@/components/Surprise/revealShader'
+import { FRAGMENT_SHADER, VERTEX_SHADER } from '@/components/Surprise/revealShader'
 
-const easeInOutCubic = t =>
-	t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+export type RevealImage = ImageBitmap | HTMLImageElement
+export type RevealFit = 'cover' | 'contain'
 
-function compileShader(gl, type, source) {
+type RevealDebugHook = {
+	renderAt: (progress: number, time?: number) => { width: number; height: number; coverage: number }
+}
+
+declare global {
+	interface Window {
+		__SURPRISE_REVEAL__?: RevealDebugHook
+	}
+}
+
+type SurpriseRevealProps = {
+	image: RevealImage
+	imageUrl: string
+	fit?: RevealFit
+	delay?: number
+	duration?: number
+	onDone?: () => void
+}
+
+const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2)
+
+function compileShader(gl: WebGLRenderingContext, type: number, source: string): WebGLShader {
 	const shader = gl.createShader(type)
+	if (!shader) throw new Error('Shader : création impossible')
 	gl.shaderSource(shader, source)
 	gl.compileShader(shader)
 	if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
@@ -20,13 +39,11 @@ function compileShader(gl, type, source) {
 	return shader
 }
 
-function createProgram(gl) {
+function createProgram(gl: WebGLRenderingContext): WebGLProgram {
 	const program = gl.createProgram()
+	if (!program) throw new Error('Programme : création impossible')
 	gl.attachShader(program, compileShader(gl, gl.VERTEX_SHADER, VERTEX_SHADER))
-	gl.attachShader(
-		program,
-		compileShader(gl, gl.FRAGMENT_SHADER, FRAGMENT_SHADER)
-	)
+	gl.attachShader(program, compileShader(gl, gl.FRAGMENT_SHADER, FRAGMENT_SHADER))
 	gl.linkProgram(program)
 	if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 		throw new Error(`Programme : ${gl.getProgramInfoLog(program)}`)
@@ -35,16 +52,19 @@ function createProgram(gl) {
 }
 
 // Facteur UV pour caler l'image dans le canvas, centrée.
-function imageScale(canvasAspect, imageAspect, fit) {
+function imageScale(canvasAspect: number, imageAspect: number, fit: RevealFit): [number, number] {
 	const wider = canvasAspect > imageAspect
 	if (fit === 'contain') {
-		return wider
-			? [canvasAspect / imageAspect, 1]
-			: [1, imageAspect / canvasAspect]
+		return wider ? [canvasAspect / imageAspect, 1] : [1, imageAspect / canvasAspect]
 	}
-	return wider
-		? [1, imageAspect / canvasAspect]
-		: [canvasAspect / imageAspect, 1]
+	return wider ? [1, imageAspect / canvasAspect] : [canvasAspect / imageAspect, 1]
+}
+
+function imageSize(image: RevealImage): [number, number] {
+	if (image instanceof HTMLImageElement) {
+		return [image.naturalWidth, image.naturalHeight]
+	}
+	return [image.width, image.height]
 }
 
 /**
@@ -61,8 +81,8 @@ export function SurpriseRevealComponent({
 	delay = 0.8,
 	duration = 8,
 	onDone,
-}) {
-	const canvasRef = useRef(null)
+}: SurpriseRevealProps) {
+	const canvasRef = useRef<HTMLCanvasElement>(null)
 	const onDoneRef = useRef(onDone)
 	const [fallback, setFallback] = useState(false)
 
@@ -86,7 +106,7 @@ export function SurpriseRevealComponent({
 			return
 		}
 
-		let program, texture, buffer
+		let program: WebGLProgram
 		try {
 			program = createProgram(gl)
 		} catch (error) {
@@ -94,22 +114,19 @@ export function SurpriseRevealComponent({
 			fallBackToImage()
 			return
 		}
+		// biome-ignore lint/correctness/useHookAtTopLevel: gl.useProgram est une méthode WebGL, pas un hook React
 		gl.useProgram(program)
 
 		// Un triangle qui couvre tout l'écran
-		buffer = gl.createBuffer()
+		const buffer = gl.createBuffer()
 		gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
-		gl.bufferData(
-			gl.ARRAY_BUFFER,
-			new Float32Array([-1, -1, 3, -1, -1, 3]),
-			gl.STATIC_DRAW
-		)
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW)
 		const aPosition = gl.getAttribLocation(program, 'aPosition')
 		gl.enableVertexAttribArray(aPosition)
 		gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0)
 
 		// L'image en texture (taille libre : clamp + linéaire, pas de mipmap)
-		texture = gl.createTexture()
+		const texture = gl.createTexture()
 		gl.activeTexture(gl.TEXTURE0)
 		gl.bindTexture(gl.TEXTURE_2D, texture)
 		gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image)
@@ -127,10 +144,15 @@ export function SurpriseRevealComponent({
 		}
 		gl.uniform1i(u.image, 0)
 
-		const imageWidth = image.naturalWidth || image.width
-		const imageHeight = image.naturalHeight || image.height
+		const [imageWidth, imageHeight] = imageSize(image)
 		const imageAspect = imageWidth / imageHeight
-		const state = { elapsed: 0, progress: 0, last: null, raf: 0, done: false }
+		const state = {
+			elapsed: 0,
+			progress: 0,
+			last: null as number | null,
+			raf: 0,
+			done: false,
+		}
 
 		const resize = () => {
 			const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
@@ -145,13 +167,13 @@ export function SurpriseRevealComponent({
 			gl.uniform2fv(u.imageScale, imageScale(width / height, imageAspect, fit))
 		}
 
-		const draw = (progress, time) => {
+		const draw = (progress: number, time: number) => {
 			gl.uniform1f(u.progress, progress)
 			gl.uniform1f(u.time, time)
 			gl.drawArrays(gl.TRIANGLES, 0, 3)
 		}
 
-		const frame = now => {
+		const frame = (now: number) => {
 			if (state.last !== null) {
 				state.elapsed += Math.min((now - state.last) / 1000, 0.1)
 			}
@@ -214,13 +236,11 @@ export function SurpriseRevealComponent({
 	if (fallback) {
 		// Sans WebGL : l'image, simplement
 		return (
-			// eslint-disable-next-line @next/next/no-img-element
+			// biome-ignore lint/performance/noImgElement: repli sans WebGL, image blob locale
 			<img
 				src={imageUrl}
 				alt={''}
-				className={`absolute inset-0 h-full w-full ${
-					fit === 'contain' ? 'object-contain' : 'object-cover'
-				} bg-black`}
+				className={`absolute inset-0 h-full w-full ${fit === 'contain' ? 'object-contain' : 'object-cover'} bg-black`}
 			/>
 		)
 	}

@@ -6,14 +6,18 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint .",
-		"prettier": "prettier --write .",
+		"lint": "biome lint . --max-diagnostics=200",
+		"lint:fix": "biome lint --write .",
+		"format": "biome format --write .",
+		"check": "biome check .",
+		"check:fix": "biome check --write .",
+		"tsc": "tsc --noEmit",
 		"precommit": "lint-staged",
 		"prepare": "husky"
 	},
 	"lint-staged": {
-		"*.js": [
-			"prettier --write"
+		"*.{js,jsx,ts,tsx,json,css}": [
+			"biome check --write --no-errors-on-unmatched"
 		]
 	},
 	"dependencies": {
@@ -23,9 +27,6 @@
 		"@heroui/styles": "3.2.4",
 		"@tailwindcss/postcss": "4.3.3",
 		"@tailwindcss/typography": "0.5.20",
-		"eslint": "9.39.5",
-		"eslint-config-next": "16.3.2",
-		"eslint-config-prettier": "10.1.8",
 		"next": "16.3.2",
 		"postcss": "8.5.26",
 		"react": "19.2.8",
@@ -36,9 +37,13 @@
 		"zustand": "5.0.15"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "2.5.10",
+		"@types/bun": "1.4.0",
+		"@types/node": "24.13.3",
+		"@types/react": "19.2.18",
+		"@types/react-dom": "19.2.4",
 		"husky": "9.1.7",
 		"lint-staged": "17.3.0",
-		"prettier": "3.9.6",
-		"prettier-plugin-tailwindcss": "0.8.1"
+		"typescript": "6.0.3"
 	}
 }

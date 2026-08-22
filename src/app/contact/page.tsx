@@ -34,11 +34,7 @@ export default function Page() {
 					'z-20 mx-auto mt-16 grid h-full w-full grid-cols-12 overflow-visible px-4 sm:py-16 md:px-8 xl:mt-0 xl:px-32'
 				}
 			>
-				<div
-					className={
-						'z-20 col-span-12 flex h-full items-center justify-start xl:col-span-5 xl:flex-col'
-					}
-				>
+				<div className={'z-20 col-span-12 flex h-full items-center justify-start xl:col-span-5 xl:flex-col'}>
 					<div className={'flex w-full flex-col justify-center'}>
 						<h1
 							className={
@@ -47,25 +43,15 @@ export default function Page() {
 						>
 							Contact
 						</h1>
-						<p
-							className={'text-center text-sm italic opacity-75 lg:text-start'}
-						>
+						<p className={'text-center text-sm italic opacity-75 lg:text-start'}>
 							{`Pour toutes questions, n'hésitez pas à nous contacter par téléphone !`}
 						</p>
 					</div>
 				</div>
 				<div className="z-10 col-span-12 flex transform items-center justify-evenly pt-0 md:pt-16 xl:col-span-7 xl:pt-64">
-					<section
-						className={
-							'grid h-full w-full grid-cols-12 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'
-						}
-					>
+					<section className={'grid h-full w-full grid-cols-12 gap-2 md:gap-4 xl:grid-rows-3 xl:gap-8'}>
 						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px]">
-							<div
-								className={
-									'flex h-[180px] w-[180px] items-center justify-center'
-								}
-							>
+							<div className={'flex h-[180px] w-[180px] items-center justify-center'}>
 								<Image
 									src={'/image00002.jpeg'}
 									width={180}
@@ -81,9 +67,7 @@ export default function Page() {
 							</p>
 							<p>
 								-&nbsp;<span className={'font-bold'}>Email :</span>
-								<span className={'underline'}>
-									&nbsp;maevacinquin1@gmail.com
-								</span>
+								<span className={'underline'}>&nbsp;maevacinquin1@gmail.com</span>
 							</p>
 						</div>
 						<div className="col-span-12 flex h-auto w-full flex-col gap-4 rounded-lg bg-white p-8 shadow-xl md:col-span-6 md:h-[400px]">

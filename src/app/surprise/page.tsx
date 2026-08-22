@@ -8,14 +8,8 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main
-			data-fullscreen-page
-			className={'fixed inset-0 overflow-hidden bg-black'}
-		>
-			<SurpriseExperienceComponent
-				video={'/surprise/disney-intro.mp4'}
-				image={'/surprise/image.jpg'}
-			/>
+		<main data-fullscreen-page className={'fixed inset-0 overflow-hidden bg-black'}>
+			<SurpriseExperienceComponent video={'/surprise/disney-intro.mp4'} image={'/surprise/image.jpg'} />
 		</main>
 	)
 }

@@ -28,18 +28,13 @@ export default function Page() {
 				alt={'will u marry me'}
 				quality={90}
 			/>
-			<div
-				className={
-					'z-20 mx-auto grid h-full w-full grid-cols-12 overflow-visible px-0 md:px-8 xl:mt-0 xl:px-32'
-				}
-			>
+			<div className={'z-20 mx-auto grid h-full w-full grid-cols-12 overflow-visible px-0 md:px-8 xl:mt-0 xl:px-32'}>
 				<div className="z-10 col-span-12 flex transform items-center justify-evenly pt-0 xl:col-span-12">
 					<div className="w-full max-w-2xl rounded-lg bg-white p-8 shadow-xl">
 						<h2 className="mb-4 text-5xl font-semibold">Photos</h2>
 						<p className="mb-4">
-							Le mariage étant passé depuis un bon moment, ce site est un moment
-							figé dans le temps, Si vous voulez les photos envoyez un message à
-							Mae ! Merci !
+							Le mariage étant passé depuis un bon moment, ce site est un moment figé dans le temps, Si vous voulez les
+							photos envoyez un message à Mae ! Merci !
 						</p>
 						{/*<ol className="mb-4 list-decimal pl-5">*/}
 						{/*	<div>*/}

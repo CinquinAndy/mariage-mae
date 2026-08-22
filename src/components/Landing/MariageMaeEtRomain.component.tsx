@@ -1,23 +1,15 @@
-import TitleOrnementedComponent from '@/components/Landing/TitleOrnemented.component'
+import Image from 'next/image'
 import { CustomSvgComponent } from '@/components/CustomSvg.component'
 import { EventInfoComponent } from '@/components/Landing/EventInfo.component'
 import { SectionComponent } from '@/components/Landing/Section.component'
-import Image from 'next/image'
+import TitleOrnementedComponent from '@/components/Landing/TitleOrnemented.component'
 
 function MariageMaeEtRomainComponent() {
 	return (
-		<div
-			className={
-				'mx-auto flex max-w-7xl flex-col gap-16 px-8 py-16 md:gap-24 md:px-4 xl:gap-32 xl:px-8'
-			}
-		>
+		<div className={'mx-auto flex max-w-7xl flex-col gap-16 px-8 py-16 md:gap-24 md:px-4 xl:gap-32 xl:px-8'}>
 			<div className={'flex flex-col gap-16'}>
 				<TitleOrnementedComponent title={'Mariage de Mae et Romain'} />
-				<div
-					className={
-						'relative flex w-full items-center justify-center px-8 md:px-16 xl:px-32'
-					}
-				>
+				<div className={'relative flex w-full items-center justify-center px-8 md:px-16 xl:px-32'}>
 					<CustomSvgComponent
 						classNames={
 							'absolute -top-4 left-4 !w-[25px] !h-[25px] md:!w-[35px] md:!h-[35px] xl:!w-[50px] xl:!h-[50px] bg-mae-950'
@@ -66,9 +58,7 @@ function MariageMaeEtRomainComponent() {
 				}
 			/>
 			<div
-				className={
-					'relative grid w-full grid-cols-4 gap-4 px-8 text-center md:grid-cols-8 md:gap-8 md:px-16 xl:px-32'
-				}
+				className={'relative grid w-full grid-cols-4 gap-4 px-8 text-center md:grid-cols-8 md:gap-8 md:px-16 xl:px-32'}
 			>
 				<EventInfoComponent
 					title="Jour J"
@@ -99,15 +89,9 @@ function MariageMaeEtRomainComponent() {
 					imageAlt="party"
 				/>
 			</div>
-			<div
-				className={
-					'relative grid w-full grid-cols-12 gap-0 px-6 text-center md:gap-8 md:px-16 xl:px-32'
-				}
-			>
+			<div className={'relative grid w-full grid-cols-12 gap-0 px-6 text-center md:gap-8 md:px-16 xl:px-32'}>
 				<div
-					className={
-						'col-span-12 mb-16 flex w-full flex-col items-center justify-center gap-16 md:col-span-6 md:mb-0'
-					}
+					className={'col-span-12 mb-16 flex w-full flex-col items-center justify-center gap-16 md:col-span-6 md:mb-0'}
 				>
 					<Image
 						src={'/image00056.jpeg'}
@@ -119,19 +103,13 @@ function MariageMaeEtRomainComponent() {
 					/>
 					<div className={'flex flex-col items-center justify-center gap-8'}>
 						<div className={'flex flex-col items-center justify-center gap-4'}>
-							<p className={'text-xl font-semibold tracking-wider'}>
-								La mariée
-							</p>
+							<p className={'text-xl font-semibold tracking-wider'}>La mariée</p>
 							<div className={'bg-mae-950/30 h-[2px] w-[20px] rounded-sm'} />
 						</div>
 						<h2 className={'text-5xl'}>Cinquin Maeva</h2>
 					</div>
 				</div>
-				<div
-					className={
-						'col-span-12 flex w-full flex-col items-center justify-center gap-16 md:col-span-6'
-					}
-				>
+				<div className={'col-span-12 flex w-full flex-col items-center justify-center gap-16 md:col-span-6'}>
 					<Image
 						src={'/image00057.jpeg'}
 						alt={'mae'}
@@ -149,62 +127,40 @@ function MariageMaeEtRomainComponent() {
 					</div>
 				</div>
 				<div className={'col-span-12 grid w-full grid-cols-12 gap-4 pt-16'}>
-					<div
-						className={
-							'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'
-						}
-					>
+					<div className={'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'}>
 						<Image
 							src={'/image00015.jpeg'}
 							alt={'mae'}
 							width={300}
 							height={500}
 							quality={100}
-							className={
-								'h-[400px] rounded-sm object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
-							}
+							className={'h-[400px] rounded-sm object-cover shadow-2xl md:h-[350px] xl:h-[500px]'}
 						/>
 					</div>
-					<div
-						className={
-							'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'
-						}
-					>
+					<div className={'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'}>
 						<Image
 							src={'/image00021.jpeg'}
 							alt={'mae'}
 							width={300}
 							height={500}
 							quality={100}
-							className={
-								'h-[250px] rounded-sm object-contain shadow-2xl md:h-[350px] xl:h-[500px]'
-							}
+							className={'h-[250px] rounded-sm object-contain shadow-2xl md:h-[350px] xl:h-[500px]'}
 						/>
 					</div>
-					<div
-						className={
-							'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'
-						}
-					>
+					<div className={'col-span-12 flex h-full w-full items-center justify-center md:col-span-6 xl:col-span-4'}>
 						<Image
 							src={'/image00016.jpeg'}
 							alt={'mae'}
 							width={300}
 							height={500}
 							quality={100}
-							className={
-								'h-[400px] rounded-sm object-cover shadow-2xl md:h-[350px] xl:h-[500px]'
-							}
+							className={'h-[400px] rounded-sm object-cover shadow-2xl md:h-[350px] xl:h-[500px]'}
 						/>
 					</div>
 				</div>
 			</div>
 			<TitleOrnementedComponent title={'Nos témoins'} ornement={false} />
-			<div
-				className={
-					'relative mb-8 grid w-full grid-cols-12 gap-2 px-8 text-start md:gap-8 md:px-16 xl:px-32'
-				}
-			>
+			<div className={'relative mb-8 grid w-full grid-cols-12 gap-2 px-8 text-start md:gap-8 md:px-16 xl:px-32'}>
 				<div className={'col-span-12 flex flex-col'}>
 					<h2 className={'text-4xl'}>
 						{`
@@ -253,11 +209,7 @@ function MariageMaeEtRomainComponent() {
 						></Image>
 					</div>
 				</div>
-				<div
-					className={
-						'col-span-12 mt-8 flex h-full flex-col gap-4 md:col-span-6'
-					}
-				>
+				<div className={'col-span-12 mt-8 flex h-full flex-col gap-4 md:col-span-6'}>
 					<div>
 						<h2 className={'text-4xl'}>Témoins du marié</h2>
 						<p className={''}>
@@ -287,11 +239,7 @@ function MariageMaeEtRomainComponent() {
 				</div>
 			</div>
 			<TitleOrnementedComponent title={'Les directives !'} ornement={false} />
-			<div
-				className={
-					'relative grid w-full grid-cols-12 gap-8 px-8 text-center md:gap-8 md:px-16 xl:px-32'
-				}
-			>
+			<div className={'relative grid w-full grid-cols-12 gap-8 px-8 text-center md:gap-8 md:px-16 xl:px-32'}>
 				<div className={'col-span-12 grid w-full grid-cols-12 gap-8'}>
 					<div className={'col-span-5 flex items-center justify-end'}>
 						<Image
@@ -300,9 +248,7 @@ function MariageMaeEtRomainComponent() {
 							width={200}
 							height={200}
 							quality={90}
-							className={
-								'h-[200px] rounded-sm object-cover shadow-2xl md:h-auto'
-							}
+							className={'h-[200px] rounded-sm object-cover shadow-2xl md:h-auto'}
 						/>
 					</div>
 					<div className={'col-span-7 flex flex-col gap-2 text-left'}>
