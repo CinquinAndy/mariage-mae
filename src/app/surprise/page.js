@@ -12,10 +12,10 @@ export default function Page() {
 			data-fullscreen-page
 			className={'fixed inset-0 overflow-hidden bg-black'}
 		>
-			<SurpriseExperienceComponent src={'/surprise/disney-intro.mp4'}>
-				{/* Calque au-dessus de la vidéo : shader, titre, animations à venir */}
-				<div className={'absolute inset-0'} />
-			</SurpriseExperienceComponent>
+			<SurpriseExperienceComponent
+				video={'/surprise/disney-intro.mp4'}
+				image={'/surprise/image.jpg'}
+			/>
 		</main>
 	)
 }

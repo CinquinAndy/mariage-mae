@@ -3,7 +3,8 @@
  * Purement visuel : l'état vient de SurpriseExperienceComponent.
  */
 export function SurpriseLoaderComponent({ status, progress, onStart }) {
-	const isHidden = status === 'playing' || status === 'ended'
+	const isHidden =
+		status === 'playing' || status === 'reveal' || status === 'revealed'
 	const percent = Math.round(progress * 100)
 
 	return (
