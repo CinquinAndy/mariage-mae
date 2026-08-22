@@ -8,7 +8,7 @@ import Script from 'next/script'
 import { FinishedPopup } from '@/app/finishedPopup'
 import { HiddenOnPagesComponent } from '@/components/HiddenOnPages.component'
 
-// Pages sans nav ni footer
+// Pages nues : ni modale, ni nav, ni footer
 const barePages = ['/surprise']
 
 const kanit = Kanit({
@@ -48,8 +48,8 @@ export default function RootLayout({ children }) {
 				data-website-id="1bf392de-37c5-4bbc-b07e-0b18d94906b2"
 			/>
 			<body className={'relative'}>
-				<FinishedPopup></FinishedPopup>
 				<HiddenOnPagesComponent pages={barePages}>
+					<FinishedPopup />
 					<NavComponent />
 				</HiddenOnPagesComponent>
 				{children}

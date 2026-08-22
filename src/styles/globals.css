@@ -165,3 +165,12 @@ html {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+/* Pages plein écran (ex. /surprise) : aucun défilement, aucune barre */
+html:has([data-fullscreen-page]),
+html:has([data-fullscreen-page]) body {
+	display: block;
+	height: 100dvh;
+	overflow: hidden;
+	overscroll-behavior: none;
+}

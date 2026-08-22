@@ -1,4 +1,4 @@
-import { SurpriseVideoComponent } from '@/components/Surprise/SurpriseVideo.component'
+import { SurpriseExperienceComponent } from '@/components/Surprise/SurpriseExperience.component'
 
 export const metadata = {
 	title: 'Surprise — Le mariage de Maeva et Romain',
@@ -8,11 +8,14 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className={'relative h-dvh w-screen overflow-hidden bg-black'}>
-			<SurpriseVideoComponent src={'/surprise/disney-intro.mp4'} />
-
-			{/* Calque au-dessus de la vidéo : shader, titre, animations à venir */}
-			<div className={'absolute inset-0'} />
+		<main
+			data-fullscreen-page
+			className={'fixed inset-0 overflow-hidden bg-black'}
+		>
+			<SurpriseExperienceComponent src={'/surprise/disney-intro.mp4'}>
+				{/* Calque au-dessus de la vidéo : shader, titre, animations à venir */}
+				<div className={'absolute inset-0'} />
+			</SurpriseExperienceComponent>
 		</main>
 	)
 }
