@@ -69,7 +69,9 @@ function imageSize(image: RevealImage): [number, number] {
 
 /**
  * Phase 2 de la surprise : le shader de révélation dessine une tache d'encre
- * qui grandit depuis le centre et laisse voir `image` à travers le noir.
+ * qui grandit depuis le centre et laisse voir `image`. Hors de la tache le
+ * canvas est transparent : la vidéo en dessous reste le fond, l'image semble
+ * en sortir.
  * `image` est un ImageBitmap (ou un <img> chargé) préparé par le loader ;
  * `imageUrl` sert au repli sans WebGL.
  * La timeline tourne sur le temps réel des frames (onglet masqué = pause).
@@ -78,7 +80,7 @@ export function SurpriseRevealComponent({
 	image,
 	imageUrl,
 	fit = 'cover',
-	delay = 0.8,
+	delay = 0,
 	duration = 8,
 	onDone,
 }: SurpriseRevealProps) {
@@ -96,7 +98,8 @@ export function SurpriseRevealComponent({
 		// Bascule sur l'image simple, hors du rendu en cours
 		const fallBackToImage = () => queueMicrotask(() => setFallback(true))
 		const gl = canvas.getContext('webgl', {
-			alpha: false,
+			alpha: true,
+			premultipliedAlpha: true,
 			antialias: false,
 			depth: false,
 			stencil: false,
@@ -211,8 +214,8 @@ export function SurpriseRevealComponent({
 					const pixels = new Uint8Array(width * height * 4)
 					gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels)
 					let lit = 0
-					for (let i = 0; i < pixels.length; i += 4) {
-						if (Math.max(pixels[i], pixels[i + 1], pixels[i + 2]) > 24) lit++
+					for (let i = 3; i < pixels.length; i += 4) {
+						if (pixels[i] > 24) lit++
 					}
 					return { width, height, coverage: lit / (width * height) }
 				},
@@ -240,17 +243,10 @@ export function SurpriseRevealComponent({
 			<img
 				src={imageUrl}
 				alt={''}
-				className={`absolute inset-0 h-full w-full ${fit === 'contain' ? 'object-contain' : 'object-cover'} bg-black`}
+				className={`absolute inset-0 h-full w-full object-top ${fit === 'contain' ? 'object-contain' : 'object-cover'} opacity-100 transition-opacity duration-1000 ease-in-out starting:opacity-0`}
 			/>
 		)
 	}
 
-	return (
-		<canvas
-			ref={canvasRef}
-			className={
-				'absolute inset-0 h-full w-full opacity-100 transition-opacity duration-1000 ease-in-out starting:opacity-0'
-			}
-		/>
-	)
+	return <canvas ref={canvasRef} className={'absolute inset-0 h-full w-full'} />
 }

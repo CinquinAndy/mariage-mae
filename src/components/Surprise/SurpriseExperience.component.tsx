@@ -5,6 +5,9 @@ import { type RevealImage, SurpriseRevealComponent } from '@/components/Surprise
 
 type ProgressReport = (received: number, total: number) => void
 
+// Secondes avant la fin de la vidéo où la révélation démarre
+const REVEAL_BEFORE_END = 2
+
 type SurpriseAssets = {
 	videoUrl: string
 	imageUrl: string
@@ -61,7 +64,9 @@ async function decodeImage(blob: Blob, url: string): Promise<RevealImage> {
  * injoignable) et blocked (autoplay refusé : un geste de l'utilisateur relance).
  *
  * Phase 1 : la vidéo, lue une seule fois, sans loop.
- * Phase 2 : le shader de révélation fait apparaître l'image à travers le noir.
+ * Phase 2 : REVEAL_BEFORE_END secondes avant la fin de la vidéo, le shader de
+ * révélation fait sortir l'image de la vidéo, qui reste en fond (et fige sur
+ * sa dernière image une fois terminée).
  *
  * Tout est téléchargé en entier pendant le loader (progression réelle) : la
  * vidéo est donnée au <video> en URL blob, l'image décodée (ImageBitmap) avant
@@ -69,6 +74,7 @@ async function decodeImage(blob: Blob, url: string): Promise<RevealImage> {
  */
 export function SurpriseExperienceComponent({ video, image, children }: SurpriseExperienceProps) {
 	const videoRef = useRef<HTMLVideoElement>(null)
+	const autoStarted = useRef(false)
 	const [status, setStatus] = useState<SurpriseStatus>('loading')
 	const [progress, setProgress] = useState(0)
 	const [assets, setAssets] = useState<SurpriseAssets | null>(null)
@@ -130,7 +136,7 @@ export function SurpriseExperienceComponent({ video, image, children }: Surprise
 
 	// Onglet masqué : le navigateur met la vidéo en pause ; on reprend au retour.
 	useEffect(() => {
-		if (status !== 'playing') return
+		if (status !== 'playing' && status !== 'reveal') return
 		const resume = () => {
 			const element = videoRef.current
 			if (!document.hidden && element && element.paused && !element.ended) {
@@ -141,7 +147,23 @@ export function SurpriseExperienceComponent({ video, image, children }: Surprise
 		return () => document.removeEventListener('visibilitychange', resume)
 	}, [status])
 
+	// canplaythrough peut retirer (après un seek) : un seul démarrage automatique
+	const onCanPlayThrough = () => {
+		if (autoStarted.current) return
+		autoStarted.current = true
+		play()
+	}
+
 	const isRevealing = status === 'reveal' || status === 'revealed'
+
+	// La révélation part un peu avant la fin de la vidéo ; ended est le filet
+	// si timeupdate n'a pas eu le temps de passer (vidéo très courte, onglet masqué).
+	const startReveal = () => setStatus(current => (current === 'playing' ? 'reveal' : current))
+	const onTimeUpdate = () => {
+		const element = videoRef.current
+		if (!element || !Number.isFinite(element.duration)) return
+		if (element.duration - element.currentTime <= REVEAL_BEFORE_END) startReveal()
+	}
 
 	return (
 		<>
@@ -152,8 +174,9 @@ export function SurpriseExperienceComponent({ video, image, children }: Surprise
 					muted
 					playsInline
 					preload={'auto'}
-					onCanPlayThrough={play}
-					onEnded={() => setStatus('reveal')}
+					onCanPlayThrough={onCanPlayThrough}
+					onTimeUpdate={onTimeUpdate}
+					onEnded={startReveal}
 					onError={() => setStatus('error')}
 					className={'absolute inset-0 h-full w-full object-cover'}
 				/>

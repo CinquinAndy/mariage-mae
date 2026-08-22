@@ -1,5 +1,6 @@
 // Shader de révélation : une tache d'encre qui grandit depuis le centre et
-// laisse voir l'image à travers le noir. Porté depuis
+// laisse voir l'image. Hors de la tache le canvas est transparent : ce qui
+// est dessous (la vidéo) reste visible, l'image semble en sortir. Porté depuis
 // https://www.shadertoy.com/view/lssBRM (bruit simplex 3D : XsX3zB).
 //
 // Uniforms :
@@ -82,10 +83,6 @@ float fbm(vec3 p) {
 	return min(f, 1.0);
 }
 
-float random(in vec2 st) {
-	return fract(sin(dot(st.xy, vec2(12.9798, 78.323))) * 43858.5563313);
-}
-
 // Coordonnées polaires : angle déroulé sur la largeur, rayon normalisé
 // (0 au centre, 1 dans les coins) pour que la couverture finale ne dépende
 // pas du format de l'écran.
@@ -137,7 +134,7 @@ float sw(vec2 p, vec2 ms) {
 	float push = pow(uProgress, 6.0) * 3.0;
 	float m = line(p.y, -0.1, perc * 0.25 + s * perc + push, 0.2);
 
-	// La tache naît du noir : fondu sur le tout début de la progression
+	// La tache naît de rien : fondu sur le tout début de la progression
 	float birth = smoothstep(0.0, 0.08, uProgress);
 	return smoothstep(0.31, 0.6, m) * birth;
 }
@@ -155,12 +152,8 @@ void main() {
 	float inside = step(0.0, iuv.x) * step(iuv.x, 1.0) * step(0.0, iuv.y) * step(iuv.y, 1.0);
 	vec3 img = texture2D(uImage, iuv).rgb * inside;
 
-	vec3 col = mix(vec3(0.0), img, s);
-
-	// Un léger grain vivant dans le noir
-	float grain = random(p * 4.0 + fract(uTime * 0.37));
-	col += (1.0 - s) * grain * 0.035;
-
-	gl_FragColor = vec4(col, 1.0);
+	// Alpha = masque, couleur prémultipliée : hors de la tache le canvas est
+	// transparent et laisse voir la vidéo en dessous.
+	gl_FragColor = vec4(img * s, s);
 }
 `
