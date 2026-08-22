@@ -18,6 +18,8 @@ declare global {
 type SurpriseRevealProps = {
 	image: RevealImage
 	imageUrl: string
+	/** Classes du bloc (largeur, arrondi, marges…) ; par défaut pleine largeur du parent */
+	className?: string
 	fit?: RevealFit
 	delay?: number
 	duration?: number
@@ -75,10 +77,16 @@ function imageSize(image: RevealImage): [number, number] {
  * `image` est un ImageBitmap (ou un <img> chargé) préparé par le loader ;
  * `imageUrl` sert au repli sans WebGL.
  * La timeline tourne sur le temps réel des frames (onglet masqué = pause).
+ *
+ * Rendu : un bloc de flux, dimensionné par son parent (largeur) et le ratio
+ * de l'image (hauteur), coins arrondis ; le canvas le remplit. La tache naît
+ * au centre du bloc et en couvre les coins à la fin. Tout se règle avec
+ * `className` (ex. "w-1/2 rounded-3xl") ou en éditant le JSX ci-dessous.
  */
 export function SurpriseRevealComponent({
 	image,
 	imageUrl,
+	className = 'w-full max-h-full rounded-2xl',
 	fit = 'cover',
 	delay = 0,
 	duration = 8,
@@ -236,17 +244,20 @@ export function SurpriseRevealComponent({
 		}
 	}, [image, fit, delay, duration])
 
-	if (fallback) {
-		// Sans WebGL : l'image, simplement
-		return (
-			// biome-ignore lint/performance/noImgElement: repli sans WebGL, image blob locale
-			<img
-				src={imageUrl}
-				alt={''}
-				className={`absolute inset-0 h-full w-full object-top ${fit === 'contain' ? 'object-contain' : 'object-cover'} opacity-100 transition-opacity duration-1000 ease-in-out starting:opacity-0`}
-			/>
-		)
-	}
+	const [imageWidth, imageHeight] = imageSize(image)
 
-	return <canvas ref={canvasRef} className={'absolute inset-0 h-full w-full'} />
+	return (
+		<div className={`relative overflow-hidden ${className}`} style={{ aspectRatio: `${imageWidth} / ${imageHeight}` }}>
+			{fallback ? (
+				// biome-ignore lint/performance/noImgElement: repli sans WebGL, image blob locale
+				<img
+					src={imageUrl}
+					alt={''}
+					className={`absolute inset-0 h-full w-full ${fit === 'contain' ? 'object-contain' : 'object-cover'} opacity-100 transition-opacity duration-1000 ease-in-out starting:opacity-0`}
+				/>
+			) : (
+				<canvas ref={canvasRef} className={'absolute inset-0 h-full w-full'} />
+			)}
+		</div>
+	)
 }

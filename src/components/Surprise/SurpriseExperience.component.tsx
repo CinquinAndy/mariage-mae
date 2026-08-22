@@ -17,6 +17,8 @@ type SurpriseAssets = {
 type SurpriseExperienceProps = {
 	video: string
 	image: string
+	/** Classes du bloc de révélation (largeur, arrondi…), voir SurpriseRevealComponent */
+	revealClassName?: string
 	children?: ReactNode
 }
 
@@ -72,7 +74,7 @@ async function decodeImage(blob: Blob, url: string): Promise<RevealImage> {
  * vidéo est donnée au <video> en URL blob, l'image décodée (ImageBitmap) avant
  * la phase 2. `children` est rendu au-dessus des deux phases, sous le loader.
  */
-export function SurpriseExperienceComponent({ video, image, children }: SurpriseExperienceProps) {
+export function SurpriseExperienceComponent({ video, image, revealClassName, children }: SurpriseExperienceProps) {
 	const videoRef = useRef<HTMLVideoElement>(null)
 	const autoStarted = useRef(false)
 	const [status, setStatus] = useState<SurpriseStatus>('loading')
@@ -183,7 +185,12 @@ export function SurpriseExperienceComponent({ video, image, children }: Surprise
 			)}
 
 			{assets && isRevealing && (
-				<SurpriseRevealComponent image={assets.image} imageUrl={assets.imageUrl} onDone={() => setStatus('revealed')} />
+				<SurpriseRevealComponent
+					image={assets.image}
+					imageUrl={assets.imageUrl}
+					className={revealClassName}
+					onDone={() => setStatus('revealed')}
+				/>
 			)}
 
 			{children}
