@@ -47,6 +47,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				strategy={'afterInteractive'}
 				data-website-id="1bf392de-37c5-4bbc-b07e-0b18d94906b2"
 			/>
+			{/* Le fond de /surprise (dégradé) est en CSS : html:has([data-fullscreen-page]) body */}
 			<body className={'relative'}>
 				<HiddenOnPagesComponent pages={barePages}>
 					<FinishedPopup />

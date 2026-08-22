@@ -173,3 +173,9 @@ html:has([data-fullscreen-page]) body {
 	overflow: hidden;
 	overscroll-behavior: none;
 }
+
+/* … et un fond dégradé, visible autour du cadre de la page (même rendu que
+   bg-linear-to-br from-mae-800 to-mae-950, sans hook client dans le layout) */
+html:has([data-fullscreen-page]) body {
+	background-image: linear-gradient(to bottom right in oklab, var(--color-mae-800), var(--color-mae-950));
+}
