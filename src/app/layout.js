@@ -6,6 +6,10 @@ import { NavComponent } from '@/components/Nav.component'
 import { SignatureComponent } from '@/components/SignatureFooter.component'
 import Script from 'next/script'
 import { FinishedPopup } from '@/app/finishedPopup'
+import { HiddenOnPagesComponent } from '@/components/HiddenOnPages.component'
+
+// Pages sans nav ni footer
+const barePages = ['/surprise']
 
 const kanit = Kanit({
 	weight: ['100', '200', '300', '400', '700', '900'],
@@ -45,9 +49,13 @@ export default function RootLayout({ children }) {
 			/>
 			<body className={'relative'}>
 				<FinishedPopup></FinishedPopup>
-				<NavComponent />
+				<HiddenOnPagesComponent pages={barePages}>
+					<NavComponent />
+				</HiddenOnPagesComponent>
 				{children}
-				<SignatureComponent />
+				<HiddenOnPagesComponent pages={barePages}>
+					<SignatureComponent />
+				</HiddenOnPagesComponent>
 			</body>
 		</html>
 	)
